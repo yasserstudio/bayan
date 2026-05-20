@@ -1,4 +1,4 @@
-import { ArrowLeft, Building2, Globe, QrCode, UserCheck } from "lucide-react";
+import { ArrowRight, Building2, Globe, QrCode, UserCheck } from "lucide-react";
 
 const steps = [
   {
@@ -25,10 +25,10 @@ const steps = [
 
 export function Proposal() {
   return (
-    <section className="py-20 px-6 bg-background">
+    <section className="py-20 px-6 bg-background" aria-labelledby="proposal-heading">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-4">
+          <h2 id="proposal-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-4">
             كيف يمكن للحكومة تبنّي هذا النظام
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -42,7 +42,7 @@ export function Proposal() {
             <div key={step.label} className="flex flex-col items-center text-center">
               <div className="relative">
                 <div className="w-16 h-16 rounded-2xl bg-navy text-white flex items-center justify-center mb-3">
-                  <step.icon className="h-7 w-7" />
+                  <step.icon className="h-7 w-7" aria-hidden="true" />
                 </div>
                 <span className="absolute -top-2 -start-2 w-6 h-6 rounded-full bg-gold text-navy text-xs font-bold flex items-center justify-center">
                   {i + 1}
@@ -53,7 +53,7 @@ export function Proposal() {
                 {step.description}
               </p>
               {i < steps.length - 1 && (
-                <ArrowLeft className="h-5 w-5 text-gold mt-3 hidden lg:block rotate-180" />
+                <ArrowRight className="h-5 w-5 text-gold mt-3 hidden lg:block" aria-hidden="true" />
               )}
             </div>
           ))}

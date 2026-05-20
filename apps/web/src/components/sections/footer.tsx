@@ -3,20 +3,20 @@ export function Footer() {
     <footer className="py-10 px-6 bg-navy border-t border-white/5">
       <div className="max-w-4xl mx-auto text-center space-y-4">
         <div>
-          <h3 className="text-white font-heading font-extrabold text-2xl mb-1">
+          <p className="text-white font-heading font-extrabold text-2xl mb-1">
             بيان
-          </h3>
-          <p className="text-white/50 text-sm">تحقّق من كل بيان</p>
+          </p>
+          <p className="text-white/60 text-sm">تحقّق من كل بيان</p>
         </div>
 
-        <div className="text-white/30 text-xs space-y-1">
+        <div className="text-white/50 text-xs space-y-1">
           <p>
             مبادرة من{" "}
             <a
               href="https://yasser.studio"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gold/70 hover:text-gold transition-colors"
+              className="text-gold hover:text-gold-light transition-colors"
             >
               yasser.studio
             </a>
@@ -27,8 +27,8 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="pt-4 border-t border-white/5 text-white/20 text-xs">
-          © {new Date().getFullYear()} بيان
+        <div className="pt-4 border-t border-white/5 text-white/40 text-xs">
+          <span suppressHydrationWarning>© {new Date().getFullYear()} بيان</span>
         </div>
       </div>
     </footer>

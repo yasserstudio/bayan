@@ -1,14 +1,14 @@
 "use client";
 
 import { Check, Copy, MessageCircle, Send } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const shareUrl = "https://bayan.yasser.studio";
-const shareText = "بيان — تحقّق من البيانات الحكومية الجزائرية قبل ما تشاركها 🔍";
+const shareText = "بيان — تحقّق من البيانات الحكومية الجزائرية قبل ما تشاركها";
 
 function FacebookIcon() {
   return (
-    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
     </svg>
   );
@@ -16,7 +16,7 @@ function FacebookIcon() {
 
 function XIcon() {
   return (
-    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
     </svg>
   );
@@ -51,23 +51,34 @@ const channels = [
 
 export function ShareCta() {
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  function handleCopy() {
-    navigator.clipboard.writeText(shareUrl);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
+
+  async function handleCopy() {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      timerRef.current = setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Clipboard API unavailable (HTTP context, denied permission)
+    }
   }
 
   return (
-    <section className="py-20 px-6 bg-navy text-white">
+    <section className="py-20 px-6 bg-navy text-white" aria-labelledby="share-heading">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-extrabold font-heading mb-4">
+        <h2 id="share-heading" className="text-3xl md:text-4xl font-extrabold font-heading mb-4">
           شارك بيان مع من تعرف
         </h2>
         <p className="text-white/70 text-lg mb-2">
           إذا ماكانش في بيان، ماشي رسمي
         </p>
-        <p className="text-white/50 text-sm mb-10">
+        <p className="text-white/60 text-sm mb-10">
           كل مشاركة تساهم في حماية شخص من التضليل
         </p>
 
@@ -78,9 +89,10 @@ export function ShareCta() {
               href={ch.href}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`شارك على ${ch.name} (يفتح في تبويب جديد)`}
               className={`${ch.color} text-white px-5 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 transition-colors`}
             >
-              <ch.Icon className="h-5 w-5" />
+              <ch.Icon aria-hidden="true" className="h-5 w-5" />
               {ch.name}
             </a>
           ))}
@@ -93,12 +105,12 @@ export function ShareCta() {
         >
           {copied ? (
             <>
-              <Check className="h-4 w-4 text-green-400" />
+              <Check className="h-4 w-4 text-green-400" aria-hidden="true" />
               تم النسخ!
             </>
           ) : (
             <>
-              <Copy className="h-4 w-4" />
+              <Copy className="h-4 w-4" aria-hidden="true" />
               انسخ الرابط
             </>
           )}

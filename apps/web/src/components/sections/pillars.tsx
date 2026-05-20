@@ -4,7 +4,7 @@ const pillars = [
   {
     icon: QrCode,
     title: "تحقّق",
-    titleEn: "Verify",
+
     description: "امسح رمز QR أو أدخل رمز التحقّق أو ارفع صورة البيان",
     status: "متوفر في النسخة التجريبية",
     available: true,
@@ -12,7 +12,7 @@ const pillars = [
   {
     icon: BookOpen,
     title: "الدليل الرسمي",
-    titleEn: "Directory",
+
     description: "تصفّح جميع البيانات الحكومية الرسمية في مكان واحد",
     status: "قريبًا في النسخة الثانية",
     available: false,
@@ -20,7 +20,7 @@ const pillars = [
   {
     icon: Flag,
     title: "بلّغ",
-    titleEn: "Report",
+
     description: "بلّغ عن بيان مشبوه وساهم في حماية المجتمع",
     status: "قريبًا في النسخة الثانية",
     available: false,
@@ -28,7 +28,7 @@ const pillars = [
   {
     icon: Shield,
     title: "وعي رقمي",
-    titleEn: "Tips",
+
     description: "نصائح عملية لحماية نفسك من التضليل الرقمي",
     status: "متوفر أدناه",
     available: true,
@@ -37,10 +37,10 @@ const pillars = [
 
 export function Pillars() {
   return (
-    <section className="py-20 px-6 bg-navy/[0.02]">
+    <section className="py-20 px-6 bg-navy/[0.02]" aria-labelledby="pillars-heading">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-4">
+          <h2 id="pillars-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-4">
             أربعة محاور لحماية المواطن
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -65,7 +65,7 @@ export function Pillars() {
                     : "bg-muted text-muted-foreground"
                 }`}
               >
-                <pillar.icon className="h-7 w-7" />
+                <pillar.icon className="h-7 w-7" aria-hidden="true" />
               </div>
               <h3 className="font-bold font-heading text-lg mb-1">{pillar.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed mb-3">

@@ -23,10 +23,10 @@ const methods = [
 
 export function Solution() {
   return (
-    <section className="py-20 px-6 bg-navy/[0.02]">
+    <section className="py-20 px-6 bg-navy/[0.02]" aria-labelledby="solution-heading">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-4">
+          <h2 id="solution-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-4">
             الحل: بيان — تحقّق من كل بيان
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -45,7 +45,7 @@ export function Solution() {
                 {method.tag}
               </div>
               <div className="w-12 h-12 rounded-xl bg-gold/10 text-gold flex items-center justify-center mb-4 mt-2">
-                <method.icon className="h-6 w-6" />
+                <method.icon className="h-6 w-6" aria-hidden="true" />
               </div>
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-sm text-gold font-bold">{i + 1}</span>

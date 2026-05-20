@@ -20,10 +20,10 @@ const impacts = [
 
 export function Problem() {
   return (
-    <section className="py-20 px-6 bg-background">
+    <section className="py-20 px-6 bg-background" aria-labelledby="problem-heading">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-4">
+          <h2 id="problem-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-4">
             المشكلة: بيانات مزوّرة في كل مكان
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -39,7 +39,7 @@ export function Problem() {
               className="bg-card border border-border rounded-2xl p-6 text-center"
             >
               <div className="w-12 h-12 rounded-xl bg-red-50 text-red-500 flex items-center justify-center mx-auto mb-4">
-                <item.icon className="h-6 w-6" />
+                <item.icon className="h-6 w-6" aria-hidden="true" />
               </div>
               <h3 className="font-bold font-heading text-lg mb-2">{item.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
