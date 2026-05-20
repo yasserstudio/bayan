@@ -1,9 +1,31 @@
+# dependencies
 node_modules/
+
+# build output
 .next/
 out/
 dist/
+*.tsbuildinfo
+
+# environment
 .env
 .env.*
 !.env.example
+
+# os
 .DS_Store
-*.tsbuildinfo
+Thumbs.db
+
+# ide
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# vercel
+.vercel
