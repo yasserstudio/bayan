@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Main text using dotless ba (ٮ) + يان in Readex Pro -->
+  <text
+    x="210"
+    y="112"
+    font-family="'Readex Pro', sans-serif"
+    font-weight="700"
+    font-size="96"
+    fill="#0F2B3C"
+    text-anchor="middle"
+    direction="rtl"
+  >ٮيان</text>
+
+  <!-- Gold checkmark circle replacing the ب dot — far right under the ب -->
+  <g transform="translate(325, 128)">
+    <circle cx="0" cy="0" r="8" fill="#D4982A"/>
+    <polyline
+      points="-3.5,0.5 -1.2,3 4,-2.5"
+      fill="none"
+      stroke="white"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+</svg>
