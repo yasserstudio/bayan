@@ -24,39 +24,58 @@ const steps = [
   },
 ];
 
+const faqs = [
+  {
+    q: "واش بيان موقع تاع الحكومة؟",
+    a: "لا، بيان مشروع مستقل — ماشي موقع حكومي رسمي. هذي فكرة تقنية نقترحوها باش الحكومة تقدر تتبنّاها وتحمي المواطنين من التزوير.",
+  },
+  {
+    q: "هذا غير ديمو — كيفاش يفيدني دروك؟",
+    a: "الديمو يوريك كيفاش النظام يخدم. دروك الأهم هو إنك تفهم الفكرة وتشاركها — كل ما بزاف ناس عرفوها، كل ما قربنا من التطبيق الحقيقي.",
+  },
+  {
+    q: "واش المعلومات تاعي في أمان؟",
+    a: "بيان ما يجمعش حتى معلومة شخصية. ما كاينش تسجيل، ما كاينش كوكيز تتبّع. تدخل، تتحقّق، وتخرج.",
+  },
+  {
+    q: "وقتاش تخرج النسخة الكاملة؟",
+    a: "النسخة الثانية غادي تخدم ببيانات حقيقية من المواقع الرسمية تاع الوزارات. نخدمو عليها دروك — تابعونا باش تكونو أول ناس يعرفو.",
+  },
+];
+
 export function Proposal() {
   return (
     <section className="h-dvh flex flex-col justify-center px-6 bg-background overflow-hidden" aria-labelledby="proposal-heading">
       <div className="max-w-5xl mx-auto w-full">
         <AnimateOnScroll>
-          <div className="text-center mb-8">
-            <h2 id="proposal-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-3">
+          <div className="text-center mb-5">
+            <h2 id="proposal-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-2">
               كيفاش الحكومة تقدر تتبنّى هذا النظام
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              مقترح مفتوح وبسيط — ما يحتاجش بنية تحتية معقّدة ويقدر يتطبّق بالتدريج
+            <p className="text-muted-foreground text-base max-w-2xl mx-auto">
+              مقترح مفتوح وبسيط — ما يحتاجش بنية تحتية معقّدة
             </p>
           </div>
         </AnimateOnScroll>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
           {steps.map((step, i) => (
             <AnimateOnScroll key={step.label}>
               <div className="flex flex-col items-center text-center">
                 <div className="relative">
-                  <div className="w-14 h-14 rounded-2xl bg-navy text-white flex items-center justify-center mb-2">
-                    <step.icon className="h-6 w-6" aria-hidden="true" />
+                  <div className="w-12 h-12 rounded-2xl bg-navy text-white flex items-center justify-center mb-2">
+                    <step.icon className="h-5 w-5" aria-hidden="true" />
                   </div>
-                  <span className="absolute -top-2 -start-2 w-6 h-6 rounded-full bg-gold text-navy text-xs font-bold flex items-center justify-center">
+                  <span className="absolute -top-2 -start-2 w-5 h-5 rounded-full bg-gold text-navy text-xs font-bold flex items-center justify-center">
                     {i + 1}
                   </span>
                 </div>
-                <h3 className="font-bold font-heading text-sm mb-1">{step.label}</h3>
+                <h3 className="font-bold font-heading text-sm mb-0.5">{step.label}</h3>
                 <p className="text-muted-foreground text-xs leading-relaxed">
                   {step.description}
                 </p>
                 {i < steps.length - 1 && (
-                  <ArrowLeft className="h-5 w-5 text-gold mt-2 hidden lg:block" aria-hidden="true" />
+                  <ArrowLeft className="h-4 w-4 text-gold mt-1.5 hidden lg:block" aria-hidden="true" />
                 )}
               </div>
             </AnimateOnScroll>
@@ -64,15 +83,20 @@ export function Proposal() {
         </div>
 
         <AnimateOnScroll>
-          <div className="bg-navy/5 border border-navy/10 rounded-2xl p-6 text-center">
-            <p className="text-navy font-heading font-bold text-lg mb-1">
-              هذا مقترح مفتوح ومجاني
-            </p>
-            <p className="text-muted-foreground text-sm max-w-xl mx-auto leading-relaxed">
-              بيان مشروع مستقل يقترح فكرة تقنية لخدمة الصالح العام.
-              الحكومة والمؤسسات الرسمية مرحبا بيهم يستلهمو من هذا النظام
-              ويطوّروه ولا يتبنّوه كيما يشوفو مناسب.
-            </p>
+          <div className="space-y-1.5">
+            {faqs.map((faq) => (
+              <details key={faq.q} name="faq" className="group bg-card border border-border rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 p-3 cursor-pointer font-heading font-bold text-navy text-sm hover:bg-muted/50 transition-colors list-none [&::-webkit-details-marker]:hidden">
+                  {faq.q}
+                  <span className="text-gold text-lg shrink-0 transition-transform motion-reduce:transition-none group-open:rotate-45" aria-hidden="true">
+                    +
+                  </span>
+                </summary>
+                <div className="px-3 pb-3 text-muted-foreground text-xs leading-relaxed">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
           </div>
         </AnimateOnScroll>
       </div>
