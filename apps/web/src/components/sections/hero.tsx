@@ -68,7 +68,7 @@ export function Hero() {
               </div>
               <span className="text-xs text-gold">رمز QR</span>
             </div>
-            <span className="text-xs text-gold/70">ما يتزوّرش</span>
+            <span className="text-xs text-green-400">ما يتزوّرش</span>
           </div>
         </div>
 
