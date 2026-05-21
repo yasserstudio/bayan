@@ -58,7 +58,7 @@ export function Demo() {
   }
 
   return (
-    <section id="demo" className="h-dvh flex flex-col justify-center px-6 bg-background overflow-hidden relative" aria-labelledby="demo-heading">
+    <section id="demo" className="min-h-dvh md:h-dvh py-12 md:py-0 flex flex-col justify-center px-6 bg-background overflow-hidden relative" aria-labelledby="demo-heading">
       <QrPattern variant="dark" />
       <div className="max-w-7xl mx-auto w-full relative">
         <div className="text-center mb-4">

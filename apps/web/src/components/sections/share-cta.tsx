@@ -61,7 +61,7 @@ export function ShareCta() {
   }
 
   return (
-    <section className="h-dvh flex flex-col justify-center bg-navy text-white overflow-hidden relative" aria-labelledby="share-heading">
+    <section className="min-h-dvh md:h-dvh py-12 md:py-0 flex flex-col justify-center bg-navy text-white overflow-hidden relative" aria-labelledby="share-heading">
       <QrPattern variant="light" />
       <div className="max-w-5xl mx-auto text-center px-6 flex-1 flex flex-col justify-center relative">
         <h2 id="share-heading" className="text-3xl md:text-4xl font-extrabold font-heading mb-3">

@@ -25,7 +25,7 @@ const methods = [
 
 export function Solution() {
   return (
-    <section className="h-dvh flex flex-col justify-center px-6 bg-navy/[0.02] overflow-hidden relative" aria-labelledby="solution-heading">
+    <section className="min-h-dvh md:h-dvh py-12 md:py-0 flex flex-col justify-center px-6 bg-navy/[0.02] overflow-hidden relative" aria-labelledby="solution-heading">
       <QrPattern variant="dark" />
       <div className="max-w-7xl mx-auto w-full relative">
         <AnimateOnScroll>

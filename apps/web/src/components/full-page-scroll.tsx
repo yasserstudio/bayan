@@ -3,12 +3,25 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { ChevronDown } from "lucide-react";
 
+function useIsDesktop() {
+  const [desktop, setDesktop] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    setDesktop(mq.matches);
+    const h = (e: MediaQueryListEvent) => setDesktop(e.matches);
+    mq.addEventListener("change", h);
+    return () => mq.removeEventListener("change", h);
+  }, []);
+  return desktop;
+}
+
 export function FullPageScroll({ children, sectionCount }: { children: ReactNode; sectionCount: number }) {
   const [active, setActive] = useState(0);
   const animating = useRef(false);
   const wrapper = useRef<HTMLDivElement>(null);
   const touchY = useRef(0);
   const [noMotion, setNoMotion] = useState(false);
+  const isDesktop = useIsDesktop();
 
   const navigate = useCallback((direction: 1 | -1) => {
     if (animating.current) return;
@@ -33,6 +46,7 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
   }, [sectionCount]);
 
   useEffect(() => {
+    if (!isDesktop) return;
     const el = wrapper.current;
     if (!el) return;
 
@@ -51,9 +65,10 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
 
     el.addEventListener("wheel", onWheel, { passive: false });
     return () => el.removeEventListener("wheel", onWheel);
-  }, [navigate]);
+  }, [navigate, isDesktop]);
 
   useEffect(() => {
+    if (!isDesktop) return;
     const el = wrapper.current;
     if (!el) return;
     const onStart = (e: TouchEvent) => { touchY.current = e.touches[0].clientY; };
@@ -65,9 +80,10 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
     el.addEventListener("touchstart", onStart, { passive: true });
     el.addEventListener("touchend", onEnd, { passive: true });
     return () => { el.removeEventListener("touchstart", onStart); el.removeEventListener("touchend", onEnd); };
-  }, [navigate]);
+  }, [navigate, isDesktop]);
 
   useEffect(() => {
+    if (!isDesktop) return;
     function onKey(e: KeyboardEvent) {
       const tag = (e.target as HTMLElement).tagName;
       if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
@@ -76,9 +92,10 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [navigate]);
+  }, [navigate, isDesktop]);
 
   useEffect(() => {
+    if (!isDesktop) return;
     function onClick(e: MouseEvent) {
       const a = (e.target as HTMLElement).closest("a[href^='#']");
       if (!a) return;
@@ -93,7 +110,7 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
     }
     document.addEventListener("click", onClick);
     return () => document.removeEventListener("click", onClick);
-  }, [goTo]);
+  }, [goTo, isDesktop]);
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -106,6 +123,10 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
   const isHero = active === 0;
   const isLast = active === sectionCount - 1;
   const isDark = isHero || isLast;
+
+  if (!isDesktop) {
+    return <div>{children}</div>;
+  }
 
   return (
     <div ref={wrapper} className="h-dvh overflow-hidden relative">
@@ -122,7 +143,7 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
       {/* Dot navigation */}
       <nav
         aria-label="أقسام الصفحة"
-        className="fixed start-4 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col items-center gap-0.5"
+        className="fixed start-4 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-0.5"
       >
         {Array.from({ length: sectionCount }, (_, i) => (
           <button
@@ -154,11 +175,6 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
           <ChevronDown className="h-5 w-5 text-white/40" />
         </div>
       )}
-
-      {/* Mobile page counter */}
-      <div className={`fixed bottom-4 start-4 z-50 md:hidden text-xs font-mono tabular-nums ${isDark ? "text-white/50" : "text-navy/40"}`}>
-        {active + 1}/{sectionCount}
-      </div>
     </div>
   );
 }

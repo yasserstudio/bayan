@@ -7,7 +7,7 @@ const qrDots = Array.from({ length: 9 }, (_, i) => (
 
 export function Hero() {
   return (
-    <section data-hero className="h-dvh relative bg-navy text-white flex items-center justify-center overflow-hidden" aria-labelledby="hero-heading">
+    <section data-hero className="min-h-dvh md:h-dvh py-12 md:py-0 relative bg-navy text-white flex items-center justify-center overflow-hidden" aria-labelledby="hero-heading">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-navy-light)_0%,_var(--color-navy)_70%)]" />
       <QrPattern variant="light" />
 
