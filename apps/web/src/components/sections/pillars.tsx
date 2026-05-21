@@ -60,7 +60,7 @@ export function Pillars() {
   return (
     <section className="h-dvh flex flex-col justify-center px-6 bg-navy/[0.02] overflow-hidden relative" aria-labelledby="pillars-heading">
       <QrPattern variant="dark" />
-      <div className="max-w-5xl mx-auto w-full relative">
+      <div className="max-w-7xl mx-auto w-full relative">
         <AnimateOnScroll>
           <div className="text-center mb-5">
             <h2 id="pillars-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-2">

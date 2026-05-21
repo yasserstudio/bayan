@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="py-10 px-6 bg-navy border-t border-white/5 relative overflow-hidden">
       <QrPattern variant="light" />
-      <div className="max-w-4xl mx-auto text-center space-y-4 relative">
+      <div className="max-w-5xl mx-auto text-center space-y-4 relative">
         <div>
           <p className="text-white font-heading font-extrabold text-2xl mb-1">
             بيان

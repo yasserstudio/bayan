@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function AnnouncementComparison() {
   return (
-    <div className="flex items-start justify-center gap-6 md:gap-10 max-w-3xl mx-auto" aria-hidden="true">
+    <div className="flex items-start justify-center gap-6 md:gap-12 max-w-4xl mx-auto" aria-hidden="true">
       {/* Forgeable version */}
       <div className="flex-1 max-w-[280px] md:max-w-[340px] flex flex-col items-center">
         <div className="w-full rounded-lg shadow-lg overflow-hidden border border-black/5 rotate-[-1.5deg] hover:rotate-0 transition-transform duration-300">

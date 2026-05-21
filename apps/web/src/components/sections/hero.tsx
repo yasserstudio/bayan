@@ -20,7 +20,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-4 md:mb-8 backdrop-blur-sm">
           <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse motion-reduce:animate-none" aria-hidden="true" />
           <span>نسخة تجريبية — مفهوم تقني</span>
