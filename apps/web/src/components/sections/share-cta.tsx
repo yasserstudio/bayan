@@ -80,7 +80,7 @@ export function ShareCta() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`شارك على ${ch.name} (يفتح في تبويب جديد)`}
-              className={`${ch.color} text-white px-5 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 transition-colors`}
+              className={`${ch.color} text-white px-5 py-3 rounded-full font-bold text-sm flex items-center gap-2 transition-colors`}
             >
               <ch.Icon aria-hidden="true" className="h-5 w-5" />
               {ch.name}

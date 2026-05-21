@@ -122,7 +122,7 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
       {/* Dot navigation */}
       <nav
         aria-label="أقسام الصفحة"
-        className="fixed start-4 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-2 hidden md:flex"
+        className="fixed start-4 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col items-center gap-0.5"
       >
         {Array.from({ length: sectionCount }, (_, i) => (
           <button
@@ -131,16 +131,18 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
             onClick={() => goTo(i)}
             aria-label={`القسم ${i + 1} من ${sectionCount}`}
             aria-current={i === active ? "step" : undefined}
-            className={`rounded-full transition-all duration-300 cursor-pointer ${
+            className="min-w-[28px] min-h-[28px] flex items-center justify-center cursor-pointer"
+          >
+            <span className={`block rounded-full transition-all duration-300 ${
               i === active
-                ? "w-2.5 h-2.5 bg-gold scale-125"
+                ? "w-2.5 h-2.5 bg-gold"
                 : isDark
-                  ? "w-1.5 h-1.5 bg-white/30 hover:bg-white/60"
-                  : "w-1.5 h-1.5 bg-navy/20 hover:bg-navy/40"
-            }`}
-          />
+                  ? "w-1.5 h-1.5 bg-white/40 hover:bg-white/70"
+                  : "w-1.5 h-1.5 bg-navy/25 hover:bg-navy/50"
+            }`} />
+          </button>
         ))}
-        <span className={`text-[10px] font-mono mt-1 tabular-nums ${isDark ? "text-white/40" : "text-navy/30"}`}>
+        <span className={`text-xs font-mono mt-1 tabular-nums ${isDark ? "text-white/60" : "text-navy/40"}`}>
           {active + 1}/{sectionCount}
         </span>
       </nav>
@@ -154,7 +156,7 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
       )}
 
       {/* Mobile page counter */}
-      <div className={`fixed bottom-4 start-4 z-50 md:hidden text-xs font-mono tabular-nums ${isDark ? "text-white/30" : "text-navy/20"}`}>
+      <div className={`fixed bottom-4 start-4 z-50 md:hidden text-xs font-mono tabular-nums ${isDark ? "text-white/50" : "text-navy/40"}`}>
         {active + 1}/{sectionCount}
       </div>
     </div>

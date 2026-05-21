@@ -30,7 +30,7 @@ export function Stories() {
           {evidence.map((item) => (
             <AnimateOnScroll key={item.id}>
               <figure className="bg-card border border-border rounded-2xl overflow-hidden">
-                <div className="relative aspect-[4/3] bg-muted">
+                <div className="relative aspect-[16/10] bg-muted">
                   <Image
                     src={item.image}
                     alt={item.alt}

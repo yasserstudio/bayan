@@ -38,7 +38,7 @@ export function Faq() {
         <div className="space-y-2">
           {faqs.map((faq) => (
             <AnimateOnScroll key={faq.q}>
-              <details className="group bg-card border border-border rounded-xl overflow-hidden">
+              <details name="faq" className="group bg-card border border-border rounded-xl overflow-hidden">
                 <summary className="flex items-center justify-between gap-4 p-4 cursor-pointer font-heading font-bold text-navy text-sm hover:bg-muted/50 transition-colors list-none [&::-webkit-details-marker]:hidden">
                   {faq.q}
                   <span className="text-gold text-lg shrink-0 transition-transform motion-reduce:transition-none group-open:rotate-45" aria-hidden="true">

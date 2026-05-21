@@ -19,7 +19,7 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-8 backdrop-blur-sm">
+        <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-4 md:mb-8 backdrop-blur-sm">
           <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse motion-reduce:animate-none" aria-hidden="true" />
           <span>نسخة تجريبية — مفهوم تقني</span>
         </div>
@@ -33,12 +33,12 @@ export function Hero() {
         <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-3 leading-relaxed">
           كل يوم بيانات مزوّرة تطلع في فيسبوك وواتساب — وحتى واحد يعرف واش يصدّق.
         </p>
-        <p className="text-lg md:text-xl text-gold/90 font-bold max-w-2xl mx-auto mb-10">
+        <p className="text-lg md:text-xl text-gold/90 font-bold max-w-2xl mx-auto mb-6 md:mb-10">
           بيان يخلّيك تعرف الحقيقة في ثوانٍ.
         </p>
 
         <p className="sr-only">مقارنة بين الختم الأحمر اللي يتزوّر بسهولة ورمز QR اللي ما يتزوّرش</p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12" aria-hidden="true">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 md:mb-12" aria-hidden="true">
           <div className="flex flex-col items-center gap-2">
             <div className="w-24 h-32 rounded-lg bg-white/5 border border-white/10 flex flex-col items-center justify-center gap-2 p-3">
               <div className="w-10 h-10 rounded-full border-2 border-red-400/60 flex items-center justify-center">
@@ -49,7 +49,8 @@ export function Hero() {
             <span className="text-xs text-white/40">يتزوّر بسهولة</span>
           </div>
 
-          <ArrowLeft className="h-6 w-6 text-gold" />
+          <ArrowLeft className="h-6 w-6 text-gold hidden sm:block" />
+          <ChevronDown className="h-6 w-6 text-gold sm:hidden" />
 
           <div className="flex flex-col items-center gap-2">
             <div className="w-24 h-32 rounded-lg bg-gold/10 border border-gold/30 flex flex-col items-center justify-center gap-2 p-3">

@@ -1,4 +1,4 @@
-import { ArrowRight, Building2, Globe, QrCode, UserCheck } from "lucide-react";
+import { ArrowLeft, Building2, Globe, QrCode, UserCheck } from "lucide-react";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 
 const steps = [
@@ -56,7 +56,7 @@ export function Proposal() {
                   {step.description}
                 </p>
                 {i < steps.length - 1 && (
-                  <ArrowRight className="h-5 w-5 text-gold mt-2 hidden lg:block" aria-hidden="true" />
+                  <ArrowLeft className="h-5 w-5 text-gold mt-2 hidden lg:block" aria-hidden="true" />
                 )}
               </div>
             </AnimateOnScroll>

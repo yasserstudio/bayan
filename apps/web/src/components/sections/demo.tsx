@@ -58,7 +58,7 @@ export function Demo() {
   return (
     <section id="demo" className="h-dvh flex flex-col justify-center px-6 bg-background overflow-hidden" aria-labelledby="demo-heading">
       <div className="max-w-3xl mx-auto w-full">
-        <div className="text-center mb-6">
+        <div className="text-center mb-4">
           <h2 id="demo-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-2">
             جرّب التحقّق دروك
           </h2>
@@ -74,7 +74,7 @@ export function Demo() {
           </p>
         </div>
 
-        <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
+        <div className="bg-card border border-border rounded-2xl p-4 md:p-6">
           <div className="flex gap-3 mb-4">
             <input
               type="text"
@@ -101,7 +101,7 @@ export function Demo() {
 
           <div aria-live="polite" aria-atomic="true" aria-busy={state === "loading"}>
             {state === "loading" && (
-              <div className="text-center py-6" role="status">
+              <div className="text-center py-4" role="status">
                 <div className="w-8 h-8 border-3 border-gold/30 border-t-gold rounded-full animate-spin mx-auto mb-2 motion-reduce:animate-none" aria-hidden="true" />
                 <p className="text-muted-foreground text-sm">نلقّبو...</p>
               </div>
@@ -203,12 +203,12 @@ export function Demo() {
           )}
         </div>
 
-        <div className="flex items-center justify-center gap-2 mt-4 text-muted-foreground text-sm">
+        <div className="flex items-center justify-center gap-2 mt-2 text-muted-foreground text-sm">
           <Users className="h-4 w-4" aria-hidden="true" />
           <span>+12,847 واحد جرّبو التحقّق</span>
         </div>
 
-        <div className="flex items-center justify-center gap-3 mt-4">
+        <div className="hidden sm:flex items-center justify-center gap-3 mt-2">
           <span className="text-muted-foreground text-sm">جرّبتها؟ ابعثها لعائلتك</span>
           <a
             href={`https://wa.me/?text=${encodeURIComponent(shareText + " " + shareUrl)}`}
@@ -232,7 +232,7 @@ export function Demo() {
           </a>
         </div>
 
-        <p className="text-center text-muted-foreground text-xs mt-2">
+        <p className="text-center text-muted-foreground text-xs mt-1">
           هذي نسخة تجريبية ببيانات توضيحية — النسخة الحقيقية غادي تخدم مع البيانات الرسمية
         </p>
       </div>

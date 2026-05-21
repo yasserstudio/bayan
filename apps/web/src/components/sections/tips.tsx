@@ -52,7 +52,7 @@ export function Tips() {
                     <tip.icon className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="font-bold font-heading text-sm mb-1">
+                    <h3 className="font-bold font-heading text-base mb-1">
                       <span className="text-navy font-bold me-1">{i + 1}.</span>
                       {tip.title}
                     </h3>

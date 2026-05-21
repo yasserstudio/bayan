@@ -41,7 +41,7 @@ export function Solution() {
         <div className="grid md:grid-cols-3 gap-4 mb-8">
           {methods.map((method, i) => (
             <AnimateOnScroll key={method.title}>
-              <div className="relative bg-card border border-border rounded-2xl p-5 group hover:border-gold/30 transition-colors h-full">
+              <div className="relative bg-card border border-border rounded-2xl p-5 pt-6 group hover:border-gold/30 transition-colors h-full">
                 <div className="absolute -top-3 start-4 bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full">
                   {method.tag}
                 </div>
@@ -49,7 +49,7 @@ export function Solution() {
                   <method.icon className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-sm text-gold font-bold">{i + 1}</span>
+                  <span className="text-sm text-navy/60 font-bold">{i + 1}</span>
                   <h3 className="font-bold font-heading text-lg">{method.title}</h3>
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed">
