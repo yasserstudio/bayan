@@ -1,5 +1,6 @@
 import { Camera, Keyboard, QrCode } from "lucide-react";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
+import { QrPattern } from "@/components/qr-pattern";
 
 const methods = [
   {
@@ -24,8 +25,9 @@ const methods = [
 
 export function Solution() {
   return (
-    <section className="h-dvh flex flex-col justify-center px-6 bg-navy/[0.02] overflow-hidden" aria-labelledby="solution-heading">
-      <div className="max-w-5xl mx-auto w-full">
+    <section className="h-dvh flex flex-col justify-center px-6 bg-navy/[0.02] overflow-hidden relative" aria-labelledby="solution-heading">
+      <QrPattern variant="dark" />
+      <div className="max-w-5xl mx-auto w-full relative">
         <AnimateOnScroll>
           <div className="text-center mb-8">
             <h2 id="solution-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-3">

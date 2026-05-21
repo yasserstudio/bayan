@@ -1,5 +1,6 @@
 import { ArrowLeft, Building2, Globe, QrCode, UserCheck } from "lucide-react";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
+import { QrPattern } from "@/components/qr-pattern";
 
 const steps = [
   {
@@ -45,8 +46,9 @@ const faqs = [
 
 export function Proposal() {
   return (
-    <section className="h-dvh flex flex-col justify-center px-6 bg-background overflow-hidden" aria-labelledby="proposal-heading">
-      <div className="max-w-5xl mx-auto w-full">
+    <section className="h-dvh flex flex-col justify-center px-6 bg-background overflow-hidden relative" aria-labelledby="proposal-heading">
+      <QrPattern variant="dark" />
+      <div className="max-w-5xl mx-auto w-full relative">
         <AnimateOnScroll>
           <div className="text-center mb-5">
             <h2 id="proposal-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-2">

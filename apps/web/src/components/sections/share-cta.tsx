@@ -3,6 +3,7 @@
 import { Check, Copy, MessageCircle, Send } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { shareUrl, shareText, FacebookIcon } from "@/lib/share";
+import { QrPattern } from "@/components/qr-pattern";
 
 function XIcon() {
   return (
@@ -60,8 +61,9 @@ export function ShareCta() {
   }
 
   return (
-    <section className="h-dvh flex flex-col justify-center bg-navy text-white overflow-hidden" aria-labelledby="share-heading">
-      <div className="max-w-3xl mx-auto text-center px-6 flex-1 flex flex-col justify-center">
+    <section className="h-dvh flex flex-col justify-center bg-navy text-white overflow-hidden relative" aria-labelledby="share-heading">
+      <QrPattern variant="light" />
+      <div className="max-w-3xl mx-auto text-center px-6 flex-1 flex flex-col justify-center relative">
         <h2 id="share-heading" className="text-3xl md:text-4xl font-extrabold font-heading mb-3">
           ابعث بيان لمن تعرف
         </h2>

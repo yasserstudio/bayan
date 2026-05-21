@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowRight, CheckCircle, MessageCircle, Search, Users, XCircle } from "lucide-react";
+import { QrPattern } from "@/components/qr-pattern";
 import { announcements, findAnnouncement, type Announcement } from "@/data/announcements";
 import { shareUrl, shareText, FacebookIcon } from "@/lib/share";
 
@@ -57,8 +58,9 @@ export function Demo() {
   }
 
   return (
-    <section id="demo" className="h-dvh flex flex-col justify-center px-6 bg-background overflow-hidden" aria-labelledby="demo-heading">
-      <div className="max-w-5xl mx-auto w-full">
+    <section id="demo" className="h-dvh flex flex-col justify-center px-6 bg-background overflow-hidden relative" aria-labelledby="demo-heading">
+      <QrPattern variant="dark" />
+      <div className="max-w-5xl mx-auto w-full relative">
         <div className="text-center mb-4">
           <h2 id="demo-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-2">
             جرّب التحقّق دروك

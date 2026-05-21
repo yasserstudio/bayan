@@ -1,10 +1,12 @@
 import { MessageCircle } from "lucide-react";
 import { shareUrl, shareText, FacebookIcon } from "@/lib/share";
+import { QrPattern } from "@/components/qr-pattern";
 
 export function MiniShare() {
   return (
-    <section className="py-10 px-6 bg-gold/5 border-y border-gold/10">
-      <div className="max-w-2xl mx-auto text-center">
+    <section className="py-10 px-6 bg-gold/5 border-y border-gold/10 relative overflow-hidden">
+      <QrPattern variant="dark" />
+      <div className="max-w-2xl mx-auto text-center relative">
         <p className="font-heading font-bold text-navy text-lg mb-4">
           جرّبتها؟ ابعثها لعائلتك
         </p>
