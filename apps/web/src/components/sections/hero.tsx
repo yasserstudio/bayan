@@ -8,6 +8,15 @@ export function Hero() {
   return (
     <section data-hero className="h-dvh relative bg-navy text-white flex items-center justify-center overflow-hidden" aria-labelledby="hero-heading">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-navy-light)_0%,_var(--color-navy)_70%)]" />
+      {/* Subtle QR-like background pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        aria-hidden="true"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='4' y='4' width='3' height='3' fill='white'/%3E%3Crect x='8' y='4' width='3' height='3' fill='white'/%3E%3Crect x='12' y='4' width='3' height='3' fill='white'/%3E%3Crect x='4' y='8' width='3' height='3' fill='white'/%3E%3Crect x='12' y='8' width='3' height='3' fill='white'/%3E%3Crect x='4' y='12' width='3' height='3' fill='white'/%3E%3Crect x='8' y='12' width='3' height='3' fill='white'/%3E%3Crect x='12' y='12' width='3' height='3' fill='white'/%3E%3Crect x='28' y='4' width='3' height='3' fill='white'/%3E%3Crect x='36' y='8' width='3' height='3' fill='white'/%3E%3Crect x='32' y='12' width='3' height='3' fill='white'/%3E%3Crect x='44' y='44' width='3' height='3' fill='white'/%3E%3Crect x='48' y='44' width='3' height='3' fill='white'/%3E%3Crect x='52' y='44' width='3' height='3' fill='white'/%3E%3Crect x='44' y='48' width='3' height='3' fill='white'/%3E%3Crect x='52' y='48' width='3' height='3' fill='white'/%3E%3Crect x='44' y='52' width='3' height='3' fill='white'/%3E%3Crect x='48' y='52' width='3' height='3' fill='white'/%3E%3Crect x='52' y='52' width='3' height='3' fill='white'/%3E%3Crect x='24' y='28' width='3' height='3' fill='white'/%3E%3Crect x='28' y='32' width='3' height='3' fill='white'/%3E%3C/svg%3E")`,
+          backgroundSize: "60px 60px",
+        }}
+      />
 
       <div className="absolute top-0 inset-x-0 z-20 bg-white/5 backdrop-blur-sm border-b border-white/10 py-2 px-4 text-center text-sm">
         <div className="flex items-center justify-center gap-2">

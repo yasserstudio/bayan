@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { ArrowRight, CheckCircle, MessageCircle, Search, Users, XCircle } from "lucide-react";
 import { announcements, findAnnouncement, type Announcement } from "@/data/announcements";
 import { shareUrl, shareText, FacebookIcon } from "@/lib/share";
@@ -57,12 +58,12 @@ export function Demo() {
 
   return (
     <section id="demo" className="h-dvh flex flex-col justify-center px-6 bg-background overflow-hidden" aria-labelledby="demo-heading">
-      <div className="max-w-3xl mx-auto w-full">
+      <div className="max-w-5xl mx-auto w-full">
         <div className="text-center mb-4">
           <h2 id="demo-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-2">
             جرّب التحقّق دروك
           </h2>
-          <p className="text-muted-foreground text-base">
+          <p className="text-muted-foreground text-sm">
             دخّل رمز التحقّق تاع البيان — جرّب{" "}
             <button
               type="button"
@@ -74,7 +75,25 @@ export function Demo() {
           </p>
         </div>
 
-        <div className="bg-card border border-border rounded-2xl p-4 md:p-6">
+        <div className="flex gap-5 items-start">
+          <div className="hidden md:block w-56 lg:w-64 shrink-0">
+            <div className="rounded-xl overflow-hidden shadow-lg border border-border">
+              <Image
+                src="/sample-announcement.png"
+                alt="نموذج بيان حكومي موثّق برمز QR ورمز تحقّق رقمي MEN-2026-0312"
+                width={800}
+                height={1100}
+                className="w-full h-auto"
+                sizes="256px"
+              />
+            </div>
+            <p className="text-center text-muted-foreground text-xs mt-2">
+              بيان موثّق برمز QR — المستقبل
+            </p>
+          </div>
+
+          <div className="flex-1 min-w-0">
+        <div className="bg-card border border-border rounded-2xl p-4 md:p-5">
           <div className="flex gap-3 mb-4">
             <input
               type="text"
@@ -235,6 +254,8 @@ export function Demo() {
         <p className="text-center text-muted-foreground text-xs mt-1">
           هذي نسخة تجريبية ببيانات توضيحية — النسخة الحقيقية غادي تخدم مع البيانات الرسمية
         </p>
+          </div>
+        </div>
       </div>
     </section>
   );
