@@ -6,7 +6,7 @@ export function Footer() {
           <p className="text-white font-heading font-extrabold text-2xl mb-1">
             بيان
           </p>
-          <p className="text-white/60 text-sm">تحقّق من كل بيان</p>
+          <p className="text-white/60 text-sm">اتأكّد من كل بيان</p>
         </div>
 
         <div className="text-white/50 text-xs space-y-1">
@@ -21,7 +21,7 @@ export function Footer() {
               yasser.studio
             </a>
           </p>
-          <p>مشروع مستقل — ليس موقعًا حكوميًا رسميًا</p>
+          <p>مشروع مستقل — ماشي موقع حكومي رسمي</p>
           <p dir="ltr" className="font-sans">
             Projet indépendant — ne représente aucun organisme gouvernemental
           </p>

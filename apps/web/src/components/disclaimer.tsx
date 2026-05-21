@@ -6,8 +6,7 @@ export function Disclaimer() {
       <div className="max-w-4xl mx-auto flex items-center justify-center gap-2">
         <AlertTriangle className="h-4 w-4 text-gold shrink-0" aria-hidden="true" />
         <span>
-          هذا مشروع مستقل وليس موقعًا حكوميًا رسميًا — يعرض مفهومًا
-          تقنيًا ببيانات توضيحية
+          هذا مشروع مستقل ماشي موقع حكومي — يوري فكرة تقنية ببيانات توضيحية
         </span>
       </div>
     </div>

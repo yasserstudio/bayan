@@ -2,17 +2,7 @@
 
 import { Check, Copy, MessageCircle, Send } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-
-const shareUrl = "https://bayan.yasser.studio";
-const shareText = "بيان — تحقّق من البيانات الحكومية الجزائرية قبل ما تشاركها";
-
-function FacebookIcon() {
-  return (
-    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-    </svg>
-  );
-}
+import { shareUrl, shareText, FacebookIcon } from "@/lib/share";
 
 function XIcon() {
   return (
@@ -65,24 +55,24 @@ export function ShareCta() {
       setCopied(true);
       timerRef.current = setTimeout(() => setCopied(false), 2000);
     } catch {
-      // Clipboard API unavailable (HTTP context, denied permission)
+      // Clipboard API unavailable
     }
   }
 
   return (
-    <section className="py-20 px-6 bg-navy text-white" aria-labelledby="share-heading">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 id="share-heading" className="text-3xl md:text-4xl font-extrabold font-heading mb-4">
-          شارك بيان مع من تعرف
+    <section className="h-dvh flex flex-col justify-center bg-navy text-white overflow-hidden" aria-labelledby="share-heading">
+      <div className="max-w-3xl mx-auto text-center px-6 flex-1 flex flex-col justify-center">
+        <h2 id="share-heading" className="text-3xl md:text-4xl font-extrabold font-heading mb-3">
+          ابعث بيان لمن تعرف
         </h2>
         <p className="text-white/70 text-lg mb-2">
-          إذا ماكانش في بيان، ماشي رسمي
+          كل يوم بيانات مزوّرة جداد يطلعو — مشاركتك اليوم تحمي واحد غدوة
         </p>
-        <p className="text-white/60 text-sm mb-10">
-          كل مشاركة تساهم في حماية شخص من التضليل
+        <p className="text-white/60 text-sm mb-8">
+          ابعثها في قروب العائلة
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
           {channels.map((ch) => (
             <a
               key={ch.name}
@@ -101,7 +91,7 @@ export function ShareCta() {
         <button
           type="button"
           onClick={handleCopy}
-          className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-full text-sm transition-colors cursor-pointer"
+          className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-full text-sm transition-colors cursor-pointer mx-auto"
         >
           {copied ? (
             <>
@@ -116,6 +106,32 @@ export function ShareCta() {
           )}
         </button>
       </div>
+
+      <footer className="border-t border-white/5 py-6 px-6">
+        <div className="max-w-4xl mx-auto text-center space-y-2">
+          <p className="text-white/60 text-sm">اتأكّد من كل بيان</p>
+          <div className="text-white/40 text-xs space-y-0.5">
+            <p>
+              مبادرة من{" "}
+              <a
+                href="https://yasser.studio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold hover:text-gold-light transition-colors"
+              >
+                yasser.studio
+              </a>
+              {" "}— مشروع مستقل ماشي موقع حكومي
+            </p>
+            <p dir="ltr" className="font-sans">
+              Projet indépendant — ne représente aucun organisme gouvernemental
+            </p>
+          </div>
+          <p className="text-white/30 text-xs" suppressHydrationWarning>
+            © {new Date().getFullYear()} بيان
+          </p>
+        </div>
+      </footer>
     </section>
   );
 }

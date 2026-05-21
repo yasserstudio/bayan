@@ -1,4 +1,4 @@
-import { ArrowLeft, ChevronDown, X } from "lucide-react";
+import { AlertTriangle, ArrowLeft, ChevronDown, X } from "lucide-react";
 
 const qrDots = Array.from({ length: 9 }, (_, i) => (
   <div key={i} className="bg-gold/70 rounded-[1px]" />
@@ -6,10 +6,19 @@ const qrDots = Array.from({ length: 9 }, (_, i) => (
 
 export function Hero() {
   return (
-    <section className="relative bg-navy text-white min-h-[80vh] flex items-center justify-center overflow-hidden" aria-labelledby="hero-heading">
+    <section data-hero className="h-dvh relative bg-navy text-white flex items-center justify-center overflow-hidden" aria-labelledby="hero-heading">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-navy-light)_0%,_var(--color-navy)_70%)]" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 py-20 text-center">
+      <div className="absolute top-0 inset-x-0 z-20 bg-white/5 backdrop-blur-sm border-b border-white/10 py-2 px-4 text-center text-sm">
+        <div className="flex items-center justify-center gap-2">
+          <AlertTriangle className="h-4 w-4 text-gold shrink-0" aria-hidden="true" />
+          <span className="text-white/70">
+            هذا مشروع مستقل ماشي موقع حكومي — يوري فكرة تقنية ببيانات توضيحية
+          </span>
+        </div>
+      </div>
+
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-8 backdrop-blur-sm">
           <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse motion-reduce:animate-none" aria-hidden="true" />
           <span>نسخة تجريبية — مفهوم تقني</span>
@@ -21,12 +30,15 @@ export function Hero() {
           <span className="text-gold">الحقيقة ما تروحش.</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-          بيان يساعدك تتحقّق من البيانات الحكومية الجزائرية في ثوانٍ —
-          امسح رمز QR أو أدخل رمز التحقّق أو ارفع صورة البيان.
+        <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-3 leading-relaxed">
+          كل يوم بيانات مزوّرة تطلع في فيسبوك وواتساب — وحتى واحد يعرف واش يصدّق.
+        </p>
+        <p className="text-lg md:text-xl text-gold/90 font-bold max-w-2xl mx-auto mb-10">
+          بيان يخلّيك تعرف الحقيقة في ثوانٍ.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16" aria-hidden="true">
+        <p className="sr-only">مقارنة بين الختم الأحمر اللي يتزوّر بسهولة ورمز QR اللي ما يتزوّرش</p>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12" aria-hidden="true">
           <div className="flex flex-col items-center gap-2">
             <div className="w-24 h-32 rounded-lg bg-white/5 border border-white/10 flex flex-col items-center justify-center gap-2 p-3">
               <div className="w-10 h-10 rounded-full border-2 border-red-400/60 flex items-center justify-center">
@@ -34,7 +46,7 @@ export function Hero() {
               </div>
               <span className="text-xs text-white/50">الختم القديم</span>
             </div>
-            <span className="text-xs text-white/40">قابل للتزوير</span>
+            <span className="text-xs text-white/40">يتزوّر بسهولة</span>
           </div>
 
           <ArrowLeft className="h-6 w-6 text-gold" />
@@ -46,7 +58,7 @@ export function Hero() {
               </div>
               <span className="text-xs text-gold">رمز QR</span>
             </div>
-            <span className="text-xs text-gold/70">غير قابل للتزوير</span>
+            <span className="text-xs text-gold/70">ما يتزوّرش</span>
           </div>
         </div>
 
@@ -54,7 +66,7 @@ export function Hero() {
           href="#demo"
           className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-bold px-8 py-3 rounded-full transition-colors text-lg"
         >
-          جرّب التحقّق الآن
+          جرّب التحقّق دروك
           <ChevronDown className="h-5 w-5" aria-hidden="true" />
         </a>
       </div>
