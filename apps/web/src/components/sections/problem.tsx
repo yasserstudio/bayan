@@ -25,17 +25,6 @@ export function Problem() {
     <section className="h-dvh flex flex-col justify-center px-6 bg-background overflow-hidden" aria-labelledby="problem-heading">
       <div className="max-w-5xl mx-auto w-full">
         <AnimateOnScroll>
-          <blockquote className="text-center mb-4">
-            <p className="text-xl md:text-2xl font-heading font-bold text-navy/80 leading-relaxed">
-              &ldquo;يَا أَيُّهَا الَّذِينَ آمَنُوا إِن جَاءَكُمْ فَاسِقٌ بِنَبَإٍ فَتَبَيَّنُوا&rdquo;
-            </p>
-            <cite className="text-muted-foreground text-sm not-italic">
-              سورة الحجرات — الآية 6
-            </cite>
-          </blockquote>
-        </AnimateOnScroll>
-
-        <AnimateOnScroll>
           <div className="text-center mb-4">
             <h2 id="problem-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-2">
               المشكل: بيانات مزوّرة في كل بلاصة
