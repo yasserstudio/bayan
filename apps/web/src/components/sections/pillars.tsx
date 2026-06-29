@@ -80,14 +80,14 @@ export function Pillars() {
                 className={`rounded-xl p-4 text-center border transition-colors h-full ${
                   pillar.available
                     ? "bg-card border-gold/20 hover:border-gold/40"
-                    : "bg-card border-border opacity-75"
+                    : "bg-card border-dashed border-gold/30"
                 }`}
               >
                 <div
                   className={`w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-2 ${
                     pillar.available
                       ? "bg-gold/10 text-gold"
-                      : "bg-muted text-muted-foreground"
+                      : "bg-gold/5 text-gold/70"
                   }`}
                 >
                   <HugeiconsIcon icon={pillar.icon} className="h-5 w-5" aria-hidden="true" />
@@ -100,7 +100,7 @@ export function Pillars() {
                   className={`inline-block text-[11px] px-2.5 py-0.5 rounded-full ${
                     pillar.available
                       ? "bg-navy/10 text-navy font-bold"
-                      : "bg-muted text-muted-foreground"
+                      : "bg-gold/10 text-gold/90 font-bold"
                   }`}
                 >
                   {pillar.status}
