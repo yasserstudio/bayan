@@ -62,60 +62,64 @@ export function Pillars() {
     <section className="min-h-dvh md:h-dvh py-12 md:py-0 flex flex-col justify-center px-6 bg-sand/50 overflow-hidden relative" aria-labelledby="pillars-heading">
       <QrPattern variant="dark" />
       <div className="max-w-7xl mx-auto w-full relative">
-        <AnimateOnScroll>
-          <div className="text-center mb-5">
-            <h2 id="pillars-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-2">
-              4 حوايج باش نحميو رواحنا
-            </h2>
-            <p className="text-muted-foreground text-base max-w-2xl mx-auto">
-              بيان ماشي غير أداة تحقّق — هي منظومة كاملة ضد التضليل
-            </p>
-          </div>
-        </AnimateOnScroll>
+        <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-8 lg:gap-12 items-center mb-5">
+          <AnimateOnScroll>
+            <div className="text-center lg:text-start">
+              <h2 id="pillars-heading" className="text-3xl md:text-5xl font-extrabold font-heading text-navy mb-3 leading-[1.1]">
+                4 حوايج باش نحميو رواحنا
+              </h2>
+              <p className="text-muted-foreground text-base max-w-md mx-auto lg:mx-0">
+                بيان ماشي غير أداة تحقّق — هي منظومة كاملة ضد التضليل
+              </p>
+            </div>
+          </AnimateOnScroll>
 
-        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-3 mb-6">
-          {pillars.map((pillar) => (
-            <AnimateOnScroll key={pillar.title}>
-              <div
-                className={`rounded-xl p-4 text-center border transition-colors h-full ${
-                  pillar.available
-                    ? "bg-card border-ochre/20 hover:border-ochre/40"
-                    : "bg-card border-dashed border-ochre/30"
-                }`}
-              >
+          <div className="grid sm:grid-cols-2 gap-3">
+            {pillars.map((pillar) => (
+              <AnimateOnScroll key={pillar.title}>
                 <div
-                  className={`w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-2 ${
+                  className={`rounded-xl p-4 border transition-colors h-full ${
                     pillar.available
-                      ? "bg-ochre/10 text-ochre"
-                      : "bg-ochre/5 text-ochre/70"
+                      ? "bg-card border-ochre/20 hover:border-ochre/40"
+                      : "bg-card border-dashed border-ochre/30"
                   }`}
                 >
-                  <HugeiconsIcon icon={pillar.icon} className="h-5 w-5" aria-hidden="true" />
+                  <div className="flex items-center gap-3 mb-1.5">
+                    <div
+                      className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+                        pillar.available
+                          ? "bg-ochre/10 text-ochre"
+                          : "bg-ochre/5 text-ochre/70"
+                      }`}
+                    >
+                      <HugeiconsIcon icon={pillar.icon} className="h-5 w-5" aria-hidden="true" />
+                    </div>
+                    <h3 className="font-bold font-heading text-base">{pillar.title}</h3>
+                  </div>
+                  <p className="text-muted-foreground text-xs leading-relaxed mb-2">
+                    {pillar.description}
+                  </p>
+                  <span
+                    className={`inline-block text-[11px] px-2.5 py-0.5 rounded-full ${
+                      pillar.available
+                        ? "bg-navy/10 text-navy font-bold"
+                        : "bg-ochre/15 text-ochre font-bold"
+                    }`}
+                  >
+                    {pillar.status}
+                  </span>
                 </div>
-                <h3 className="font-bold font-heading text-sm mb-0.5">{pillar.title}</h3>
-                <p className="text-muted-foreground text-xs leading-relaxed mb-1.5">
-                  {pillar.description}
-                </p>
-                <span
-                  className={`inline-block text-[11px] px-2.5 py-0.5 rounded-full ${
-                    pillar.available
-                      ? "bg-navy/10 text-navy font-bold"
-                      : "bg-ochre/15 text-ochre font-bold"
-                  }`}
-                >
-                  {pillar.status}
-                </span>
-              </div>
-            </AnimateOnScroll>
-          ))}
+              </AnimateOnScroll>
+            ))}
+          </div>
         </div>
 
         <AnimateOnScroll>
           <div className="bg-card border border-border rounded-xl p-4">
-            <h3 className="font-bold font-heading text-base text-navy text-center mb-3">
+            <h3 className="font-bold font-heading text-base text-navy mb-3 text-center lg:text-start">
               نصائح سريعة باش تحمي روحك
             </h3>
-            <div className="grid sm:grid-cols-2 gap-2.5">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {tips.map((tip, i) => (
                 <div key={tip.title} className="flex items-start gap-2.5">
                   <div className="w-8 h-8 rounded-lg bg-ochre/10 text-ochre flex items-center justify-center shrink-0 mt-0.5">
@@ -123,7 +127,7 @@ export function Pillars() {
                   </div>
                   <div>
                     <h4 className="font-bold font-heading text-sm">
-                      <span className="text-navy font-bold me-1">{i + 1}.</span>
+                      <span className="text-ochre font-bold me-1">{i + 1}.</span>
                       {tip.title}
                     </h4>
                     <p className="text-muted-foreground text-xs leading-relaxed">
