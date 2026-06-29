@@ -92,8 +92,18 @@
   }
 }
 
+@keyframes scroll-nudge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(0.4rem); }
+}
+
+.animate-scroll-nudge {
+  animation: scroll-nudge 1.8s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .animate-pulse {
+  .animate-pulse,
+  .animate-scroll-nudge {
     animation: none;
   }
 }

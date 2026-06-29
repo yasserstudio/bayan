@@ -152,7 +152,7 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
 
       {/* Scroll hint on hero */}
       {isHero && (
-        <div className="fixed bottom-8 inset-x-0 z-50 flex flex-col items-center animate-bounce motion-reduce:animate-none pointer-events-none">
+        <div className="fixed bottom-8 inset-x-0 z-50 flex flex-col items-center animate-scroll-nudge motion-reduce:animate-none pointer-events-none">
           <span className="text-white/50 text-xs mb-1">اسحب للأسفل</span>
           <HugeiconsIcon icon={ArrowDown01Icon} className="h-5 w-5 text-white/40" aria-hidden="true" />
         </div>
