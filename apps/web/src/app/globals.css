@@ -10,7 +10,7 @@
   --font-sans: var(--font-cairo);
   --font-cairo: var(--font-cairo);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-cairo);
+  --font-heading: var(--font-reem-kufi);
   --color-navy: #0F2B3C;
   --color-navy-light: #1A3D52;
   --color-ochre: #A8521F;
@@ -102,9 +102,32 @@
   animation: scroll-nudge 1.8s ease-in-out infinite;
 }
 
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(1.25rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-card-in {
+  from { opacity: 0; transform: translateY(1rem) scale(0.94); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.hero-rise {
+  animation: hero-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.hero-card-a {
+  animation: hero-card-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+}
+.hero-card-b {
+  animation: hero-card-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-pulse,
-  .animate-scroll-nudge {
+  .animate-scroll-nudge,
+  .hero-rise,
+  .hero-card-a,
+  .hero-card-b {
     animation: none;
   }
 }

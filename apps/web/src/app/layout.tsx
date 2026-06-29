@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cairo, Geist } from "next/font/google";
+import { Cairo, Geist, Reem_Kufi } from "next/font/google";
 import "./globals.css";
 
 const siteTitle = "بيان — اتأكّد من البيانات الحكومية الجزائرية";
@@ -16,6 +16,13 @@ const cairo = Cairo({
 const geist = Geist({
   variable: "--font-geist",
   subsets: ["latin"],
+  fallback: ["system-ui", "sans-serif"],
+});
+
+const reemKufi = Reem_Kufi({
+  variable: "--font-reem-kufi",
+  subsets: ["arabic", "latin"],
+  weight: ["400", "500", "600", "700"],
   fallback: ["system-ui", "sans-serif"],
 });
 
@@ -127,7 +134,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={`${cairo.variable} ${geist.variable}`}>
+    <html lang="ar" dir="rtl" className={`${cairo.variable} ${geist.variable} ${reemKufi.variable}`}>
       <body className="h-dvh overflow-hidden bg-background text-foreground font-cairo antialiased">
         {children}
         <script
