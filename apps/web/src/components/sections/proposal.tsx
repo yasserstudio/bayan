@@ -66,7 +66,7 @@ export function Proposal() {
             <AnimateOnScroll key={step.label}>
               <div className="flex flex-col items-center text-center">
                 <div className="relative">
-                  <div className="w-12 h-12 rounded-2xl bg-navy text-white flex items-center justify-center mb-2">
+                  <div className="w-12 h-12 rounded-xl bg-navy text-white flex items-center justify-center mb-2">
                     <HugeiconsIcon icon={step.icon} className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <span className="absolute -top-2 -start-2 w-5 h-5 rounded-full bg-gold text-navy text-xs font-bold flex items-center justify-center">

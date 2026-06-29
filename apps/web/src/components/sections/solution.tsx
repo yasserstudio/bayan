@@ -44,7 +44,7 @@ export function Solution() {
         <div className="grid md:grid-cols-3 gap-4 mb-8">
           {methods.map((method, i) => (
             <AnimateOnScroll key={method.title}>
-              <div className="relative bg-card border border-border rounded-2xl p-5 pt-6 group hover:border-gold/30 transition-colors h-full">
+              <div className="relative bg-card border border-border rounded-xl p-5 pt-6 group hover:border-gold/30 transition-colors h-full">
                 <div className="absolute -top-3 start-4 bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full">
                   {method.tag}
                 </div>

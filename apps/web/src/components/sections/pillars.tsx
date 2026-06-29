@@ -77,7 +77,7 @@ export function Pillars() {
           {pillars.map((pillar) => (
             <AnimateOnScroll key={pillar.title}>
               <div
-                className={`rounded-2xl p-4 text-center border transition-colors h-full ${
+                className={`rounded-xl p-4 text-center border transition-colors h-full ${
                   pillar.available
                     ? "bg-card border-gold/20 hover:border-gold/40"
                     : "bg-card border-border opacity-75"

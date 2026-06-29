@@ -96,7 +96,7 @@ export function Demo() {
           </div>
 
           <div className="flex-1 min-w-0">
-        <div className="bg-card border border-border rounded-2xl p-4 md:p-5">
+        <div className="bg-card border border-border rounded-xl p-4 md:p-5">
           <div className="flex gap-3 mb-4">
             <input
               type="text"

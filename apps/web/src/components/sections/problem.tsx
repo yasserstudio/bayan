@@ -56,7 +56,7 @@ export function Problem() {
         <div className="grid md:grid-cols-3 gap-3 mb-4">
           {impacts.map((item) => (
             <AnimateOnScroll key={item.title}>
-              <div className="bg-card border border-border rounded-2xl p-3 text-center h-full">
+              <div className="bg-card border border-border rounded-xl p-3 text-center h-full">
                 <div className="w-9 h-9 rounded-xl bg-red-50 text-red-500 flex items-center justify-center mx-auto mb-1.5">
                   <HugeiconsIcon icon={item.icon} className="h-4 w-4" aria-hidden="true" />
                 </div>
