@@ -1,24 +1,32 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useSyncExternalStore, type ReactNode } from "react";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 interface AnimateOnScrollProps {
   children: ReactNode;
   className?: string;
 }
 
+const noopSubscribe = () => () => {};
+
+/** False during SSR and the first client render; true once mounted. */
+function useHydrated() {
+  return useSyncExternalStore(noopSubscribe, () => true, () => false);
+}
+
 export function AnimateOnScroll({ children, className = "" }: AnimateOnScrollProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [ready, setReady] = useState(false);
+  const hydrated = useHydrated();
+  const reduceMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
+  // Only hide-then-reveal once mounted on the client and motion is allowed —
+  // otherwise content renders fully visible (no JS / reduced motion).
+  const ready = hydrated && !reduceMotion;
 
   useEffect(() => {
+    if (!ready) return;
     const el = ref.current;
     if (!el) return;
-
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mq.matches) return;
-
-    setReady(true);
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -32,21 +40,8 @@ export function AnimateOnScroll({ children, className = "" }: AnimateOnScrollPro
     );
 
     observer.observe(el);
-
-    const handleChange = (e: MediaQueryListEvent) => {
-      if (e.matches) {
-        el.style.opacity = "1";
-        el.style.transform = "none";
-        observer.disconnect();
-      }
-    };
-    mq.addEventListener("change", handleChange);
-
-    return () => {
-      observer.disconnect();
-      mq.removeEventListener("change", handleChange);
-    };
-  }, []);
+    return () => observer.disconnect();
+  }, [ready]);
 
   return (
     <div

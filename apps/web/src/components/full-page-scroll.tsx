@@ -2,26 +2,15 @@
 
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { ChevronDown } from "lucide-react";
-
-function useIsDesktop() {
-  const [desktop, setDesktop] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia("(min-width: 768px)");
-    setDesktop(mq.matches);
-    const h = (e: MediaQueryListEvent) => setDesktop(e.matches);
-    mq.addEventListener("change", h);
-    return () => mq.removeEventListener("change", h);
-  }, []);
-  return desktop;
-}
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 export function FullPageScroll({ children, sectionCount }: { children: ReactNode; sectionCount: number }) {
   const [active, setActive] = useState(0);
   const animating = useRef(false);
   const wrapper = useRef<HTMLDivElement>(null);
   const touchY = useRef(0);
-  const [noMotion, setNoMotion] = useState(false);
-  const isDesktop = useIsDesktop();
+  const noMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
+  const isDesktop = useMediaQuery("(min-width: 768px)");
 
   const navigate = useCallback((direction: 1 | -1) => {
     if (animating.current) return;
@@ -111,14 +100,6 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
     document.addEventListener("click", onClick);
     return () => document.removeEventListener("click", onClick);
   }, [goTo, isDesktop]);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setNoMotion(mq.matches);
-    const h = (e: MediaQueryListEvent) => setNoMotion(e.matches);
-    mq.addEventListener("change", h);
-    return () => mq.removeEventListener("change", h);
-  }, []);
 
   const isHero = active === 0;
   const isLast = active === sectionCount - 1;
