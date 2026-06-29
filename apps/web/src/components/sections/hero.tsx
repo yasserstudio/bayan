@@ -12,7 +12,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-navy-light)_0%,_var(--color-navy)_70%)]" />
       <QrPattern variant="light" />
 
-      <div className="absolute top-0 inset-x-0 z-20 bg-white/5 backdrop-blur-sm border-b border-white/10 py-2 px-4 text-center text-sm">
+      <div className="absolute top-0 inset-x-0 z-20 bg-white/10 border-b border-white/10 py-2 px-4 text-center text-sm">
         <div className="flex items-center justify-center gap-2">
           <HugeiconsIcon icon={Alert02Icon} className="h-4 w-4 text-gold shrink-0" aria-hidden="true" />
           <span className="text-white/70">
@@ -22,7 +22,7 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-4 md:mb-8 backdrop-blur-sm">
+        <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-4 md:mb-8">
           <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse motion-reduce:animate-none" aria-hidden="true" />
           <span>نسخة تجريبية — مفهوم تقني</span>
         </div>
