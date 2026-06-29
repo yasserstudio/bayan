@@ -78,7 +78,7 @@ export function Proposal() {
                   {step.description}
                 </p>
                 {i < steps.length - 1 && (
-                  <HugeiconsIcon icon={ArrowLeft01Icon} className="h-4 w-4 text-gold mt-1.5 hidden lg:block" aria-hidden="true" />
+                  <HugeiconsIcon icon={ArrowLeft01Icon} className="h-5 w-5 text-gold mt-1.5 hidden sm:block" aria-hidden="true" />
                 )}
               </div>
             </AnimateOnScroll>
