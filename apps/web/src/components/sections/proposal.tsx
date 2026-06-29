@@ -1,25 +1,26 @@
-import { ArrowLeft, Building2, Globe, QrCode, UserCheck } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowLeft01Icon, Building02Icon, Globe02Icon, QrCodeIcon, UserCheck01Icon } from "@hugeicons/core-free-icons";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { QrPattern } from "@/components/qr-pattern";
 
 const steps = [
   {
-    icon: Building2,
+    icon: Building02Icon,
     label: "الوزارة تنشر البيان",
     description: "عبر المنصة الرقمية الرسمية تاعها",
   },
   {
-    icon: QrCode,
+    icon: QrCodeIcon,
     label: "النظام يولّد رمز QR",
     description: "رمز فريد لكل بيان + رمز تحقّق",
   },
   {
-    icon: Globe,
+    icon: Globe02Icon,
     label: "البيان يتنشر مع الرمز",
     description: "بلا ختم أحمر — غير الرمز الرقمي",
   },
   {
-    icon: UserCheck,
+    icon: UserCheck01Icon,
     label: "المواطن يتأكّد فورًا",
     description: "يمسح، يدخّل الرمز، ولا يرفع صورة",
   },
@@ -66,7 +67,7 @@ export function Proposal() {
               <div className="flex flex-col items-center text-center">
                 <div className="relative">
                   <div className="w-12 h-12 rounded-2xl bg-navy text-white flex items-center justify-center mb-2">
-                    <step.icon className="h-5 w-5" aria-hidden="true" />
+                    <HugeiconsIcon icon={step.icon} className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <span className="absolute -top-2 -start-2 w-5 h-5 rounded-full bg-gold text-navy text-xs font-bold flex items-center justify-center">
                     {i + 1}
@@ -77,7 +78,7 @@ export function Proposal() {
                   {step.description}
                 </p>
                 {i < steps.length - 1 && (
-                  <ArrowLeft className="h-4 w-4 text-gold mt-1.5 hidden lg:block" aria-hidden="true" />
+                  <HugeiconsIcon icon={ArrowLeft01Icon} className="h-4 w-4 text-gold mt-1.5 hidden lg:block" aria-hidden="true" />
                 )}
               </div>
             </AnimateOnScroll>

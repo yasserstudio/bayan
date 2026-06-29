@@ -1,7 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
-import { ChevronDown } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
 export function FullPageScroll({ children, sectionCount }: { children: ReactNode; sectionCount: number }) {
@@ -153,7 +154,7 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
       {isHero && (
         <div className="fixed bottom-8 inset-x-0 z-50 flex flex-col items-center animate-bounce motion-reduce:animate-none pointer-events-none">
           <span className="text-white/50 text-xs mb-1">اسحب للأسفل</span>
-          <ChevronDown className="h-5 w-5 text-white/40" />
+          <HugeiconsIcon icon={ArrowDown01Icon} className="h-5 w-5 text-white/40" aria-hidden="true" />
         </div>
       )}
     </div>

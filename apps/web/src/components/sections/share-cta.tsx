@@ -1,16 +1,25 @@
 "use client";
 
-import { Check, Copy, MessageCircle, Send } from "lucide-react";
+import { HugeiconsIcon, type HugeiconsIconProps } from "@hugeicons/react";
+import { Tick02Icon, Copy01Icon, BubbleChatIcon, SentIcon } from "@hugeicons/core-free-icons";
 import { useEffect, useRef, useState } from "react";
 import { shareUrl, shareText, FacebookIcon } from "@/lib/share";
 import { QrPattern } from "@/components/qr-pattern";
 
-function XIcon() {
+function XIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
-    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
     </svg>
   );
+}
+
+function WhatsappIcon(props: Omit<HugeiconsIconProps, "icon">) {
+  return <HugeiconsIcon icon={BubbleChatIcon} {...props} />;
+}
+
+function TelegramIcon(props: Omit<HugeiconsIconProps, "icon">) {
+  return <HugeiconsIcon icon={SentIcon} {...props} />;
 }
 
 const channels = [
@@ -24,13 +33,13 @@ const channels = [
     name: "واتساب",
     color: "bg-[#25D366] hover:bg-[#20BD5A]",
     href: `https://wa.me/?text=${encodeURIComponent(shareText + " " + shareUrl)}`,
-    Icon: MessageCircle,
+    Icon: WhatsappIcon,
   },
   {
     name: "تيليغرام",
     color: "bg-[#0088CC] hover:bg-[#007AB8]",
     href: `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`,
-    Icon: Send,
+    Icon: TelegramIcon,
   },
   {
     name: "إكس",
@@ -97,12 +106,12 @@ export function ShareCta() {
         >
           {copied ? (
             <>
-              <Check className="h-4 w-4 text-green-400" aria-hidden="true" />
+              <HugeiconsIcon icon={Tick02Icon} className="h-4 w-4 text-green-400" aria-hidden="true" />
               تم النسخ!
             </>
           ) : (
             <>
-              <Copy className="h-4 w-4" aria-hidden="true" />
+              <HugeiconsIcon icon={Copy01Icon} className="h-4 w-4" aria-hidden="true" />
               انسخ الرابط
             </>
           )}

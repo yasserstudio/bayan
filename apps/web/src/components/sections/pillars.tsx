@@ -1,31 +1,32 @@
-import { AlertTriangle, BookOpen, Eye, Flag, Globe, QrCode, Share2, Shield } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Alert02Icon, BookOpen01Icon, ViewIcon, Flag02Icon, Globe02Icon, QrCodeIcon, Share08Icon, Shield01Icon } from "@hugeicons/core-free-icons";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { QrPattern } from "@/components/qr-pattern";
 
 const pillars = [
   {
-    icon: QrCode,
+    icon: QrCodeIcon,
     title: "تحقّق",
     description: "امسح رمز QR ولا دخّل رمز التحقّق ولا ارفع صورة البيان",
     status: "متوفّر في الديمو",
     available: true,
   },
   {
-    icon: BookOpen,
+    icon: BookOpen01Icon,
     title: "الدليل الرسمي",
     description: "تصفّح كل البيانات الحكومية الرسمية في بلاصة وحدة",
     status: "جاي في النسخة الثانية",
     available: false,
   },
   {
-    icon: Flag,
+    icon: Flag02Icon,
     title: "بلّغ",
     description: "بلّغ على بيان مشبوه وعاون في حماية المجتمع",
     status: "جاي في النسخة الثانية",
     available: false,
   },
   {
-    icon: Shield,
+    icon: Shield01Icon,
     title: "وعي رقمي",
     description: "نصائح عملية باش تحمي روحك من التضليل الرقمي",
     status: "متوفّر هنا تحت",
@@ -35,22 +36,22 @@ const pillars = [
 
 const tips = [
   {
-    icon: Eye,
+    icon: ViewIcon,
     title: "تأكّد من المصدر",
     description: "ما تصدّقش كل حاجة تشوفها في فيسبوك — روح شوف الموقع الرسمي تاع الوزارة.",
   },
   {
-    icon: AlertTriangle,
+    icon: Alert02Icon,
     title: "ردّ بالك من الاستعجال",
     description: "\"آخر أجل غدوة!\" — البيانات المزوّرة ديما تخلعك. الرسمية تعطيك الوقت.",
   },
   {
-    icon: Share2,
+    icon: Share08Icon,
     title: "ما تشاركش قبل ما تتأكّد",
     description: "كي تشارك بيان مزوّر تضرّ ناس آخرين. تأكّد الأول وبعدها شارك.",
   },
   {
-    icon: Globe,
+    icon: Globe02Icon,
     title: "ابحث في الموقع الرسمي",
     description: "أغلب الوزارات تنشر بياناتها في مواقعها الرسمية. ابحث مباشرة قبل ما تصدّق.",
   },
@@ -89,7 +90,7 @@ export function Pillars() {
                       : "bg-muted text-muted-foreground"
                   }`}
                 >
-                  <pillar.icon className="h-5 w-5" aria-hidden="true" />
+                  <HugeiconsIcon icon={pillar.icon} className="h-5 w-5" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold font-heading text-sm mb-0.5">{pillar.title}</h3>
                 <p className="text-muted-foreground text-xs leading-relaxed mb-1.5">
@@ -118,7 +119,7 @@ export function Pillars() {
               {tips.map((tip, i) => (
                 <div key={tip.title} className="flex items-start gap-2.5">
                   <div className="w-8 h-8 rounded-lg bg-gold/10 text-gold flex items-center justify-center shrink-0 mt-0.5">
-                    <tip.icon className="h-4 w-4" aria-hidden="true" />
+                    <HugeiconsIcon icon={tip.icon} className="h-4 w-4" aria-hidden="true" />
                   </div>
                   <div>
                     <h4 className="font-bold font-heading text-sm">

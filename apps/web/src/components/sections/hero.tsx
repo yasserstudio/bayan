@@ -1,4 +1,5 @@
-import { AlertTriangle, ArrowLeft, ChevronDown, X } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Alert02Icon, ArrowLeft01Icon, ArrowDown01Icon, Cancel01Icon } from "@hugeicons/core-free-icons";
 import { QrPattern } from "@/components/qr-pattern";
 
 const qrDots = Array.from({ length: 9 }, (_, i) => (
@@ -13,7 +14,7 @@ export function Hero() {
 
       <div className="absolute top-0 inset-x-0 z-20 bg-white/5 backdrop-blur-sm border-b border-white/10 py-2 px-4 text-center text-sm">
         <div className="flex items-center justify-center gap-2">
-          <AlertTriangle className="h-4 w-4 text-gold shrink-0" aria-hidden="true" />
+          <HugeiconsIcon icon={Alert02Icon} className="h-4 w-4 text-gold shrink-0" aria-hidden="true" />
           <span className="text-white/70">
             هذا مشروع مستقل ماشي موقع حكومي — يوري فكرة تقنية ببيانات توضيحية
           </span>
@@ -44,15 +45,15 @@ export function Hero() {
           <div className="flex flex-col items-center gap-2">
             <div className="w-24 h-32 rounded-lg bg-white/5 border border-white/10 flex flex-col items-center justify-center gap-2 p-3">
               <div className="w-10 h-10 rounded-full border-2 border-red-400/60 flex items-center justify-center">
-                <X className="h-5 w-5 text-red-400" />
+                <HugeiconsIcon icon={Cancel01Icon} className="h-5 w-5 text-red-400" />
               </div>
               <span className="text-xs text-white/50">الختم القديم</span>
             </div>
             <span className="text-xs text-white/40">يتزوّر بسهولة</span>
           </div>
 
-          <ArrowLeft className="h-6 w-6 text-gold hidden sm:block" />
-          <ChevronDown className="h-6 w-6 text-gold sm:hidden" />
+          <HugeiconsIcon icon={ArrowLeft01Icon} className="h-6 w-6 text-gold hidden sm:block" />
+          <HugeiconsIcon icon={ArrowDown01Icon} className="h-6 w-6 text-gold sm:hidden" />
 
           <div className="flex flex-col items-center gap-2">
             <div className="w-24 h-32 rounded-lg bg-gold/10 border border-gold/30 flex flex-col items-center justify-center gap-2 p-3">
@@ -70,7 +71,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-bold px-8 py-3 rounded-full transition-colors text-lg"
         >
           جرّب التحقّق دروك
-          <ChevronDown className="h-5 w-5" aria-hidden="true" />
+          <HugeiconsIcon icon={ArrowDown01Icon} className="h-5 w-5" aria-hidden="true" />
         </a>
       </div>
     </section>

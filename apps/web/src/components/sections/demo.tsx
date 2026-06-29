@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { ArrowRight, CheckCircle, MessageCircle, Search, Users, XCircle } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowRight01Icon, CheckmarkCircle02Icon, BubbleChatIcon, Search01Icon, UserMultiple02Icon, CancelCircleIcon } from "@hugeicons/core-free-icons";
 import { QrPattern } from "@/components/qr-pattern";
 import { announcements, findAnnouncement, type Announcement } from "@/data/announcements";
 import { shareUrl, shareText, FacebookIcon } from "@/lib/share";
@@ -115,7 +116,7 @@ export function Demo() {
               aria-label="تحقّق"
               className="bg-gold hover:bg-gold-light disabled:opacity-50 text-navy font-bold px-6 py-2.5 rounded-xl transition-colors flex items-center gap-2 cursor-pointer"
             >
-              <Search className="h-5 w-5" aria-hidden="true" />
+              <HugeiconsIcon icon={Search01Icon} className="h-5 w-5" aria-hidden="true" />
               <span className="hidden sm:inline">تحقّق</span>
             </button>
           </div>
@@ -131,7 +132,7 @@ export function Demo() {
             {state === "found" && result && (
               <div className="border border-green-200 bg-green-50 rounded-xl p-4">
                 <div className="flex items-center gap-3 mb-3">
-                  <CheckCircle className="h-7 w-7 text-green-600 shrink-0" aria-hidden="true" />
+                  <HugeiconsIcon icon={CheckmarkCircle02Icon} className="h-7 w-7 text-green-600 shrink-0" aria-hidden="true" />
                   <div>
                     <p className="font-bold text-green-800">بيان رسمي موثّق</p>
                     <p className="text-green-700 text-xs">هذا البيان موجود في قاعدة البيانات الرسمية</p>
@@ -168,7 +169,7 @@ export function Demo() {
                   onClick={handleReset}
                   className="mt-3 text-sm text-green-700 hover:underline cursor-pointer min-h-[44px] inline-flex items-center gap-1"
                 >
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  <HugeiconsIcon icon={ArrowRight01Icon} className="h-4 w-4" aria-hidden="true" />
                   جرّب رمز آخر
                 </button>
               </div>
@@ -177,7 +178,7 @@ export function Demo() {
             {state === "not-found" && (
               <div className="border border-red-200 bg-red-50 rounded-xl p-4">
                 <div className="flex items-center gap-3 mb-3">
-                  <XCircle className="h-7 w-7 text-red-500 shrink-0" aria-hidden="true" />
+                  <HugeiconsIcon icon={CancelCircleIcon} className="h-7 w-7 text-red-500 shrink-0" aria-hidden="true" />
                   <div>
                     <p className="font-bold text-red-800">هذا البيان ما لقيناهش</p>
                     <p className="text-red-700 text-xs">
@@ -194,7 +195,7 @@ export function Demo() {
                   onClick={handleReset}
                   className="text-sm text-red-700 hover:underline cursor-pointer min-h-[44px] inline-flex items-center gap-1"
                 >
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  <HugeiconsIcon icon={ArrowRight01Icon} className="h-4 w-4" aria-hidden="true" />
                   جرّب رمز آخر
                 </button>
               </div>
@@ -225,7 +226,7 @@ export function Demo() {
         </div>
 
         <div className="flex items-center justify-center gap-2 mt-2 text-muted-foreground text-sm">
-          <Users className="h-4 w-4" aria-hidden="true" />
+          <HugeiconsIcon icon={UserMultiple02Icon} className="h-4 w-4" aria-hidden="true" />
           <span>+12,847 واحد جرّبو التحقّق</span>
         </div>
 
@@ -238,7 +239,7 @@ export function Demo() {
             aria-label="ابعث في واتساب (يفتح في تبويب جديد)"
             className="bg-[#25D366] hover:bg-[#20BD5A] text-white px-4 py-1.5 rounded-full font-bold text-xs flex items-center gap-1.5 transition-colors"
           >
-            <MessageCircle className="h-4 w-4" aria-hidden="true" />
+            <HugeiconsIcon icon={BubbleChatIcon} className="h-4 w-4" aria-hidden="true" />
             واتساب
           </a>
           <a

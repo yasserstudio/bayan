@@ -1,4 +1,5 @@
-import { MessageCircle } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { BubbleChatIcon } from "@hugeicons/core-free-icons";
 import { shareUrl, shareText, FacebookIcon } from "@/lib/share";
 import { QrPattern } from "@/components/qr-pattern";
 
@@ -18,7 +19,7 @@ export function MiniShare() {
             aria-label="ابعث في واتساب (يفتح في تبويب جديد)"
             className="bg-[#25D366] hover:bg-[#20BD5A] text-white px-5 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 transition-colors"
           >
-            <MessageCircle className="h-5 w-5" aria-hidden="true" />
+            <HugeiconsIcon icon={BubbleChatIcon} className="h-5 w-5" aria-hidden="true" />
             واتساب
           </a>
           <a

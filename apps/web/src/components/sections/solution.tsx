@@ -1,22 +1,23 @@
-import { Camera, Keyboard, QrCode } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Camera01Icon, KeyboardIcon, QrCodeIcon } from "@hugeicons/core-free-icons";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { QrPattern } from "@/components/qr-pattern";
 
 const methods = [
   {
-    icon: QrCode,
+    icon: QrCodeIcon,
     title: "امسح رمز QR",
     description: "وجّه كاميرا تليفونك على رمز QR اللي على البيان المطبوع",
     tag: "بيان مطبوع",
   },
   {
-    icon: Keyboard,
+    icon: KeyboardIcon,
     title: "دخّل رمز التحقّق",
     description: "اكتب الرمز اللي باين على البيان (مثال: MEN-2026-0847)",
     tag: "بيان رقمي ولا مطبوع",
   },
   {
-    icon: Camera,
+    icon: Camera01Icon,
     title: "ارفع صورة البيان",
     description: "صوّر البيان ولا ارفع سكرين — النظام يقرا الرمز وحدو",
     tag: "نفس التليفون",
@@ -48,7 +49,7 @@ export function Solution() {
                   {method.tag}
                 </div>
                 <div className="w-12 h-12 rounded-xl bg-gold/10 text-gold flex items-center justify-center mb-3 mt-2">
-                  <method.icon className="h-6 w-6" aria-hidden="true" />
+                  <HugeiconsIcon icon={method.icon} className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-sm text-navy/60 font-bold">{i + 1}</span>

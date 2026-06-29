@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
 
 export function StickyCta() {
   const [visible, setVisible] = useState(false);
@@ -28,7 +29,7 @@ export function StickyCta() {
         className="flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy font-bold py-3 rounded-full transition-colors w-full text-sm"
       >
         جرّب التحقّق دروك
-        <ChevronDown className="h-4 w-4" aria-hidden="true" />
+        <HugeiconsIcon icon={ArrowDown01Icon} className="h-4 w-4" aria-hidden="true" />
       </a>
     </div>
   );
