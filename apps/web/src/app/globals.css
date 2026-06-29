@@ -13,8 +13,9 @@
   --font-heading: var(--font-cairo);
   --color-navy: #0F2B3C;
   --color-navy-light: #1A3D52;
-  --color-gold: #D4982A;
-  --color-gold-light: #E8B44D;
+  --color-ochre: #C2703D;
+  --color-ochre-light: #D98A57;
+  --color-sand: #E8D5B5;
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);

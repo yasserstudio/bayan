@@ -107,14 +107,14 @@ export function Demo() {
               onKeyDown={(e) => e.key === "Enter" && handleVerify()}
               placeholder="MEN-2026-0847"
               maxLength={20}
-              className="flex-1 bg-background border border-input rounded-xl px-4 py-2.5 text-center font-mono text-lg placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
+              className="flex-1 bg-background border border-input rounded-xl px-4 py-2.5 text-center font-mono text-lg placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ochre/50 focus:border-ochre"
             />
             <button
               type="button"
               onClick={handleVerify}
               disabled={state === "loading" || !code.trim()}
               aria-label="تحقّق"
-              className="bg-gold hover:bg-gold-light disabled:opacity-50 text-navy font-bold px-6 py-2.5 rounded-xl transition-colors flex items-center gap-2 cursor-pointer"
+              className="bg-ochre hover:bg-ochre-light disabled:opacity-50 text-navy font-bold px-6 py-2.5 rounded-xl transition-colors flex items-center gap-2 cursor-pointer"
             >
               <HugeiconsIcon icon={Search01Icon} className="h-5 w-5" aria-hidden="true" />
               <span>تحقّق</span>
@@ -124,7 +124,7 @@ export function Demo() {
           <div aria-live="polite" aria-atomic="true" aria-busy={state === "loading"}>
             {state === "loading" && (
               <div className="text-center py-4" role="status">
-                <div className="w-8 h-8 border-3 border-gold/30 border-t-gold rounded-full animate-spin mx-auto mb-2 motion-reduce:animate-none" aria-hidden="true" />
+                <div className="w-8 h-8 border-3 border-ochre/30 border-t-ochre rounded-full animate-spin mx-auto mb-2 motion-reduce:animate-none" aria-hidden="true" />
                 <p className="text-muted-foreground text-sm">نلقّبو...</p>
               </div>
             )}

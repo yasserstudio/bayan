@@ -59,7 +59,7 @@ const tips = [
 
 export function Pillars() {
   return (
-    <section className="min-h-dvh md:h-dvh py-12 md:py-0 flex flex-col justify-center px-6 bg-navy/[0.02] overflow-hidden relative" aria-labelledby="pillars-heading">
+    <section className="min-h-dvh md:h-dvh py-12 md:py-0 flex flex-col justify-center px-6 bg-sand/50 overflow-hidden relative" aria-labelledby="pillars-heading">
       <QrPattern variant="dark" />
       <div className="max-w-7xl mx-auto w-full relative">
         <AnimateOnScroll>
@@ -79,15 +79,15 @@ export function Pillars() {
               <div
                 className={`rounded-xl p-4 text-center border transition-colors h-full ${
                   pillar.available
-                    ? "bg-card border-gold/20 hover:border-gold/40"
-                    : "bg-card border-dashed border-gold/30"
+                    ? "bg-card border-ochre/20 hover:border-ochre/40"
+                    : "bg-card border-dashed border-ochre/30"
                 }`}
               >
                 <div
                   className={`w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-2 ${
                     pillar.available
-                      ? "bg-gold/10 text-gold"
-                      : "bg-gold/5 text-gold/70"
+                      ? "bg-ochre/10 text-ochre"
+                      : "bg-ochre/5 text-ochre/70"
                   }`}
                 >
                   <HugeiconsIcon icon={pillar.icon} className="h-5 w-5" aria-hidden="true" />
@@ -100,7 +100,7 @@ export function Pillars() {
                   className={`inline-block text-[11px] px-2.5 py-0.5 rounded-full ${
                     pillar.available
                       ? "bg-navy/10 text-navy font-bold"
-                      : "bg-gold/10 text-gold/90 font-bold"
+                      : "bg-ochre/10 text-ochre/90 font-bold"
                   }`}
                 >
                   {pillar.status}
@@ -118,7 +118,7 @@ export function Pillars() {
             <div className="grid sm:grid-cols-2 gap-2.5">
               {tips.map((tip, i) => (
                 <div key={tip.title} className="flex items-start gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-gold/10 text-gold flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-lg bg-ochre/10 text-ochre flex items-center justify-center shrink-0 mt-0.5">
                     <HugeiconsIcon icon={tip.icon} className="h-4 w-4" aria-hidden="true" />
                   </div>
                   <div>

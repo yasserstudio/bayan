@@ -69,7 +69,7 @@ export function Proposal() {
                   <div className="w-12 h-12 rounded-xl bg-navy text-white flex items-center justify-center mb-2">
                     <HugeiconsIcon icon={step.icon} className="h-5 w-5" aria-hidden="true" />
                   </div>
-                  <span className="absolute -top-2 -start-2 w-5 h-5 rounded-full bg-gold text-navy text-xs font-bold flex items-center justify-center">
+                  <span className="absolute -top-2 -start-2 w-5 h-5 rounded-full bg-ochre text-navy text-xs font-bold flex items-center justify-center">
                     {i + 1}
                   </span>
                 </div>
@@ -78,7 +78,7 @@ export function Proposal() {
                   {step.description}
                 </p>
                 {i < steps.length - 1 && (
-                  <HugeiconsIcon icon={ArrowLeft01Icon} className="h-5 w-5 text-gold mt-1.5 hidden sm:block" aria-hidden="true" />
+                  <HugeiconsIcon icon={ArrowLeft01Icon} className="h-5 w-5 text-ochre mt-1.5 hidden sm:block" aria-hidden="true" />
                 )}
               </div>
             </AnimateOnScroll>
@@ -91,7 +91,7 @@ export function Proposal() {
               <details key={faq.q} name="faq" className="group bg-card border border-border rounded-xl overflow-hidden">
                 <summary className="flex items-center justify-between gap-4 p-3 cursor-pointer font-heading font-bold text-navy text-sm hover:bg-muted/50 transition-colors list-none [&::-webkit-details-marker]:hidden">
                   {faq.q}
-                  <span className="text-gold text-lg shrink-0 transition-transform motion-reduce:transition-none group-open:rotate-45" aria-hidden="true">
+                  <span className="text-ochre text-lg shrink-0 transition-transform motion-reduce:transition-none group-open:rotate-45" aria-hidden="true">
                     +
                   </span>
                 </summary>

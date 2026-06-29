@@ -27,7 +27,7 @@ export function AnnouncementComparison() {
 
       {/* Arrow */}
       <div className="flex-shrink-0 self-center flex flex-col items-center gap-1">
-        <svg className="w-5 h-5 sm:w-6 sm:h-6 text-gold rotate-90 sm:rotate-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <svg className="w-5 h-5 sm:w-6 sm:h-6 text-ochre rotate-90 sm:rotate-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M19 12H5M5 12l5-5M5 12l5 5" />
         </svg>
       </div>

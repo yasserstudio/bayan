@@ -38,7 +38,7 @@ const impacts = [
 
 export function Problem() {
   return (
-    <section className="min-h-dvh md:h-dvh py-12 md:py-0 flex flex-col justify-center px-6 bg-background overflow-hidden relative" aria-labelledby="problem-heading">
+    <section className="min-h-dvh md:h-dvh py-12 md:py-0 flex flex-col justify-center px-6 bg-sand/40 overflow-hidden relative" aria-labelledby="problem-heading">
       <QrPattern variant="dark" />
       <div className="max-w-7xl mx-auto w-full relative">
         <AnimateOnScroll>

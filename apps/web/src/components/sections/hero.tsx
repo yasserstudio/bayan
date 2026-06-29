@@ -3,7 +3,7 @@ import { Alert02Icon, ArrowLeft01Icon, ArrowDown01Icon, Cancel01Icon } from "@hu
 import { QrPattern } from "@/components/qr-pattern";
 
 const qrDots = Array.from({ length: 9 }, (_, i) => (
-  <div key={i} className="bg-gold/70 rounded-[1px]" />
+  <div key={i} className="bg-ochre/70 rounded-[1px]" />
 ));
 
 export function Hero() {
@@ -14,7 +14,7 @@ export function Hero() {
 
       <div className="absolute top-0 inset-x-0 z-20 bg-white/10 border-b border-white/10 py-2 px-4 text-center text-sm">
         <div className="flex items-center justify-center gap-2">
-          <HugeiconsIcon icon={Alert02Icon} className="h-4 w-4 text-gold shrink-0" aria-hidden="true" />
+          <HugeiconsIcon icon={Alert02Icon} className="h-4 w-4 text-ochre shrink-0" aria-hidden="true" />
           <span className="text-white/70">
             هذا مشروع مستقل ماشي موقع حكومي — يوري فكرة تقنية ببيانات توضيحية
           </span>
@@ -23,20 +23,20 @@ export function Hero() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-4 md:mb-8">
-          <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse motion-reduce:animate-none" aria-hidden="true" />
+          <span className="inline-block w-2 h-2 rounded-full bg-ochre animate-pulse motion-reduce:animate-none" aria-hidden="true" />
           <span>نسخة تجريبية — مفهوم تقني</span>
         </div>
 
         <h1 id="hero-heading" className="text-4xl md:text-6xl lg:text-7xl font-extrabold font-heading leading-tight mb-6">
           الختم راح.
           <br />
-          <span className="text-gold">الحقيقة ما تروحش.</span>
+          <span className="text-ochre">الحقيقة ما تروحش.</span>
         </h1>
 
         <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-3 leading-relaxed">
           كل يوم بيانات مزوّرة تطلع في فيسبوك وواتساب — وحتى واحد يعرف واش يصدّق.
         </p>
-        <p className="text-lg md:text-xl text-gold/90 font-bold max-w-2xl mx-auto mb-6 md:mb-10">
+        <p className="text-lg md:text-xl text-ochre-light/90 font-bold max-w-2xl mx-auto mb-6 md:mb-10">
           بيان يخلّيك تعرف الحقيقة في ثوانٍ.
         </p>
 
@@ -52,15 +52,15 @@ export function Hero() {
             <span className="text-xs text-white/60">يتزوّر بسهولة</span>
           </div>
 
-          <HugeiconsIcon icon={ArrowLeft01Icon} className="h-6 w-6 text-gold hidden sm:block" />
-          <HugeiconsIcon icon={ArrowDown01Icon} className="h-6 w-6 text-gold sm:hidden" />
+          <HugeiconsIcon icon={ArrowLeft01Icon} className="h-6 w-6 text-ochre hidden sm:block" />
+          <HugeiconsIcon icon={ArrowDown01Icon} className="h-6 w-6 text-ochre sm:hidden" />
 
           <div className="flex flex-col items-center gap-2">
-            <div className="w-24 h-32 rounded-lg bg-gold/10 border border-gold/30 flex flex-col items-center justify-center gap-2 p-3">
-              <div className="w-10 h-10 rounded border border-gold/50 grid grid-cols-3 grid-rows-3 gap-0.5 p-1">
+            <div className="w-24 h-32 rounded-lg bg-ochre/10 border border-ochre/30 flex flex-col items-center justify-center gap-2 p-3">
+              <div className="w-10 h-10 rounded border border-ochre/50 grid grid-cols-3 grid-rows-3 gap-0.5 p-1">
                 {qrDots}
               </div>
-              <span className="text-xs text-gold">رمز QR</span>
+              <span className="text-xs text-ochre-light">رمز QR</span>
             </div>
             <span className="text-xs text-green-400">ما يتزوّرش</span>
           </div>
@@ -68,7 +68,7 @@ export function Hero() {
 
         <a
           href="#demo"
-          className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-bold px-8 py-3 rounded-full transition-colors text-lg"
+          className="inline-flex items-center gap-2 bg-ochre hover:bg-ochre-light text-navy font-bold px-8 py-3 rounded-full transition-colors text-lg"
         >
           جرّب التحقّق دوك
           <HugeiconsIcon icon={ArrowDown01Icon} className="h-5 w-5" aria-hidden="true" />

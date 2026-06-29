@@ -19,7 +19,7 @@ export function Footer() {
               href="https://yasser.studio"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gold hover:text-gold-light transition-colors"
+              className="text-ochre-light hover:text-ochre-light transition-colors"
             >
               yasser.studio
             </a>

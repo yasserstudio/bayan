@@ -140,7 +140,7 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
           >
             <span className={`block rounded-full transition-all duration-300 ${
               i === active
-                ? "w-2.5 h-2.5 bg-gold"
+                ? "w-2.5 h-2.5 bg-ochre"
                 : isDark
                   ? "w-1.5 h-1.5 bg-white/40 hover:bg-white/70"
                   : "w-1.5 h-1.5 bg-navy/25 hover:bg-navy/50"
