@@ -32,10 +32,21 @@ bayan/
 
 ## Tech Stack
 
-- **Next.js 16** + React 19 + TypeScript
+- **Next.js 16** + React 19 + TypeScript 6
 - **Tailwind CSS 4** + shadcn/ui
+- **pnpm** (via Corepack), Node 24
 - Arabic-first, RTL layout, mobile-first
 - Deployed on Vercel
+
+## Development
+
+```bash
+cd apps/web
+pnpm install
+pnpm dev      # dev server → http://localhost:3000
+pnpm build    # production build (runs type-check)
+pnpm lint     # eslint
+```
 
 ## Status
 
