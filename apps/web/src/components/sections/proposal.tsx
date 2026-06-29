@@ -69,7 +69,7 @@ export function Proposal() {
                   <div className="w-12 h-12 rounded-xl bg-navy text-white flex items-center justify-center mb-2">
                     <HugeiconsIcon icon={step.icon} className="h-5 w-5" aria-hidden="true" />
                   </div>
-                  <span className="absolute -top-2 -start-2 w-5 h-5 rounded-full bg-ochre text-navy text-xs font-bold flex items-center justify-center">
+                  <span className="absolute -top-2 -start-2 w-5 h-5 rounded-full bg-ochre text-white text-xs font-bold flex items-center justify-center">
                     {i + 1}
                   </span>
                 </div>

@@ -26,7 +26,7 @@ export function StickyCta() {
     <div className="fixed bottom-0 inset-x-0 z-50 md:hidden p-3 bg-navy/95 backdrop-blur-sm border-t border-white/10">
       <a
         href="#demo"
-        className="flex items-center justify-center gap-2 bg-ochre hover:bg-ochre-light text-navy font-bold py-3 rounded-full transition-colors w-full text-sm"
+        className="flex items-center justify-center gap-2 bg-ochre hover:bg-ochre-light text-white hover:text-navy font-bold py-3 rounded-full transition-colors w-full text-sm"
       >
         جرّب التحقّق دوك
         <HugeiconsIcon icon={ArrowDown01Icon} className="h-4 w-4" aria-hidden="true" />

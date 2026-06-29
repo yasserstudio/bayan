@@ -30,7 +30,7 @@ export function Hero() {
         <h1 id="hero-heading" className="text-4xl md:text-6xl lg:text-7xl font-extrabold font-heading leading-tight mb-6">
           الختم راح.
           <br />
-          <span className="text-ochre">الحقيقة ما تروحش.</span>
+          <span className="text-ochre-light">الحقيقة ما تروحش.</span>
         </h1>
 
         <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-3 leading-relaxed">
@@ -68,7 +68,7 @@ export function Hero() {
 
         <a
           href="#demo"
-          className="inline-flex items-center gap-2 bg-ochre hover:bg-ochre-light text-navy font-bold px-8 py-3 rounded-full transition-colors text-lg"
+          className="inline-flex items-center gap-2 bg-ochre hover:bg-ochre-light text-white hover:text-navy font-bold px-8 py-3 rounded-full transition-colors text-lg"
         >
           جرّب التحقّق دوك
           <HugeiconsIcon icon={ArrowDown01Icon} className="h-5 w-5" aria-hidden="true" />

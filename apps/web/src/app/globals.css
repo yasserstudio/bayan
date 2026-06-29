@@ -13,8 +13,8 @@
   --font-heading: var(--font-cairo);
   --color-navy: #0F2B3C;
   --color-navy-light: #1A3D52;
-  --color-ochre: #C2703D;
-  --color-ochre-light: #D98A57;
+  --color-ochre: #A8521F;
+  --color-ochre-light: #DD9A52;
   --color-sand: #E8D5B5;
   --color-ring: var(--ring);
   --color-input: var(--input);
@@ -53,7 +53,7 @@
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.52 0 0);
+  --muted-foreground: oklch(0.46 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);

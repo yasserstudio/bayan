@@ -45,7 +45,7 @@ export function Solution() {
           {methods.map((method, i) => (
             <AnimateOnScroll key={method.title}>
               <div className="relative bg-card border border-border rounded-xl p-5 pt-6 group hover:border-ochre/30 transition-colors h-full">
-                <div className="absolute -top-3 start-4 bg-ochre text-navy text-xs font-bold px-3 py-1 rounded-full">
+                <div className="absolute -top-3 start-4 bg-ochre text-white text-xs font-bold px-3 py-1 rounded-full">
                   {method.tag}
                 </div>
                 <div className="w-12 h-12 rounded-xl bg-ochre/10 text-ochre flex items-center justify-center mb-3 mt-2">
@@ -67,7 +67,7 @@ export function Solution() {
           <div className="text-center">
             <a
               href="#demo"
-              className="inline-flex items-center gap-2 bg-ochre hover:bg-ochre-light text-navy font-bold px-8 py-3 rounded-full transition-colors"
+              className="inline-flex items-center gap-2 bg-ochre hover:bg-ochre-light text-white hover:text-navy font-bold px-8 py-3 rounded-full transition-colors"
             >
               جرّب دوك ↓
             </a>

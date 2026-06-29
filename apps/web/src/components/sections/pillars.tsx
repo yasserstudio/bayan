@@ -100,7 +100,7 @@ export function Pillars() {
                   className={`inline-block text-[11px] px-2.5 py-0.5 rounded-full ${
                     pillar.available
                       ? "bg-navy/10 text-navy font-bold"
-                      : "bg-ochre/10 text-ochre/90 font-bold"
+                      : "bg-ochre/15 text-ochre font-bold"
                   }`}
                 >
                   {pillar.status}

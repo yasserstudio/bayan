@@ -114,7 +114,7 @@ export function Demo() {
               onClick={handleVerify}
               disabled={state === "loading" || !code.trim()}
               aria-label="تحقّق"
-              className="bg-ochre hover:bg-ochre-light disabled:opacity-50 text-navy font-bold px-6 py-2.5 rounded-xl transition-colors flex items-center gap-2 cursor-pointer"
+              className="bg-ochre hover:bg-ochre-light disabled:opacity-50 text-white hover:text-navy font-bold px-6 py-2.5 rounded-xl transition-colors flex items-center gap-2 cursor-pointer"
             >
               <HugeiconsIcon icon={Search01Icon} className="h-5 w-5" aria-hidden="true" />
               <span>تحقّق</span>
