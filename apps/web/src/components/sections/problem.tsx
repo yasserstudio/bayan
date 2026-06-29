@@ -1,22 +1,8 @@
-import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Clock01Icon, ShieldQuestionMarkIcon, UserMultiple02Icon } from "@hugeicons/core-free-icons";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { AnnouncementComparison } from "@/components/announcement-comparison";
 import { QrPattern } from "@/components/qr-pattern";
-
-const evidence = [
-  {
-    src: "/evidence/ennahar-interior-ministry.png",
-    alt: "تغريدة النهار TV: وزارة الداخلية تفنّد بيانات مزوّرة منتشرة على مواقع التواصل",
-    caption: "النهار TV — وزارة الداخلية تفنّد بيانات مزوّرة",
-  },
-  {
-    src: "/evidence/interior-ministry-fake-cars.png",
-    alt: "منشور وزارة الداخلية: تفنيد بيان مزوّر حول استيراد السيارات المستعملة",
-    caption: "وزارة الداخلية — بيان مزوّر حول السيارات",
-  },
-];
 
 const impacts = [
   {
@@ -53,7 +39,7 @@ export function Problem() {
           </div>
         </AnimateOnScroll>
 
-        <div className="grid md:grid-cols-3 gap-3 mb-4">
+        <div className="grid md:grid-cols-3 gap-3 mb-3">
           {impacts.map((item) => (
             <AnimateOnScroll key={item.title}>
               <div className="bg-card border border-border rounded-xl p-3 text-center h-full">
@@ -71,33 +57,6 @@ export function Problem() {
 
         <AnimateOnScroll>
           <AnnouncementComparison />
-        </AnimateOnScroll>
-
-        <AnimateOnScroll>
-          <div className="mt-6 md:mt-4">
-            <p className="text-center text-muted-foreground text-xs mb-3">
-              أدلّة حقيقية — وزارات تفنّد بيانات مزوّرة كل يوم
-            </p>
-            <div className="flex justify-center gap-3 md:gap-4">
-              {evidence.map((item) => (
-                <figure key={item.src} className="w-[140px] sm:w-[180px] md:w-[200px]">
-                  <div className="rounded-lg overflow-hidden border border-border shadow-sm">
-                    <Image
-                      src={item.src}
-                      alt={item.alt}
-                      width={400}
-                      height={400}
-                      className="w-full h-auto"
-                      sizes="(max-width: 640px) 140px, (max-width: 768px) 180px, 200px"
-                    />
-                  </div>
-                  <figcaption className="text-center text-muted-foreground text-[10px] mt-1.5 leading-tight">
-                    {item.caption}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
         </AnimateOnScroll>
       </div>
     </section>

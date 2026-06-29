@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/hero";
 import { Problem } from "@/components/sections/problem";
+import { Evidence } from "@/components/sections/evidence";
 import { Demo } from "@/components/sections/demo";
 import { Solution } from "@/components/sections/solution";
 import { Pillars } from "@/components/sections/pillars";
@@ -13,9 +14,10 @@ export default function Home() {
       <a href="#demo" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:start-2 focus:z-[100] focus:bg-ochre focus:text-navy focus:px-4 focus:py-2 focus:rounded-full focus:font-bold">
         تخطّ إلى التحقّق
       </a>
-      <FullPageScroll sectionCount={7}>
+      <FullPageScroll sectionCount={8}>
         <Hero />
         <Problem />
+        <Evidence />
         <Solution />
         <Demo />
         <Pillars />
