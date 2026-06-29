@@ -5,6 +5,8 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
+const toArabicDigits = (n: number) => String(n).replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[+d]);
+
 export function FullPageScroll({ children, sectionCount }: { children: ReactNode; sectionCount: number }) {
   const [active, setActive] = useState(0);
   const animating = useRef(false);
@@ -146,7 +148,7 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
           </button>
         ))}
         <span className={`text-xs font-mono mt-1 tabular-nums ${isDark ? "text-white/60" : "text-navy/70"}`}>
-          {active + 1}/{sectionCount}
+          {toArabicDigits(active + 1)}/{toArabicDigits(sectionCount)}
         </span>
       </nav>
 
