@@ -5,7 +5,7 @@ export function AnnouncementComparison() {
     <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-4 sm:gap-6 md:gap-12 max-w-4xl mx-auto" aria-hidden="true">
       {/* Forgeable version */}
       <div className="w-[200px] sm:flex-1 sm:w-auto sm:max-w-[280px] md:max-w-[340px] flex flex-col items-center">
-        <div className="w-full rounded-lg shadow-lg overflow-hidden border border-black/5 rotate-[-1.5deg] hover:rotate-0 transition-transform duration-300">
+        <div className="w-full rounded-lg shadow-lg overflow-hidden rotate-[-1.5deg] hover:rotate-0 transition-transform duration-300">
           <Image
             src="/traditional-announcement.jpeg"
             alt=""
@@ -34,7 +34,7 @@ export function AnnouncementComparison() {
 
       {/* Bayan verified version */}
       <div className="w-[200px] sm:flex-1 sm:w-auto sm:max-w-[280px] md:max-w-[340px] flex flex-col items-center">
-        <div className="w-full rounded-lg shadow-lg overflow-hidden border border-green-300 ring-1 ring-green-200/50">
+        <div className="w-full rounded-lg overflow-hidden border border-green-300 ring-1 ring-green-200/50">
           <Image
             src="/sample-announcement.png"
             alt=""

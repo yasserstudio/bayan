@@ -80,7 +80,7 @@ export function Demo() {
 
         <div className="flex gap-5 items-start">
           <div className="hidden md:block w-56 lg:w-64 shrink-0">
-            <div className="rounded-xl overflow-hidden shadow-lg border border-border">
+            <div className="rounded-xl overflow-hidden border border-border">
               <Image
                 src="/sample-announcement.png"
                 alt="نموذج بيان حكومي موثّق برمز QR ورمز تحقّق رقمي MEN-2026-0312"
