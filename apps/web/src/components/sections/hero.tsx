@@ -49,7 +49,7 @@ export function Hero() {
               </div>
               <span className="text-xs text-white/50">الختم القديم</span>
             </div>
-            <span className="text-xs text-white/40">يتزوّر بسهولة</span>
+            <span className="text-xs text-white/60">يتزوّر بسهولة</span>
           </div>
 
           <HugeiconsIcon icon={ArrowLeft01Icon} className="h-6 w-6 text-gold hidden sm:block" />

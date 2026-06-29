@@ -145,7 +145,7 @@ export function FullPageScroll({ children, sectionCount }: { children: ReactNode
             }`} />
           </button>
         ))}
-        <span className={`text-xs font-mono mt-1 tabular-nums ${isDark ? "text-white/60" : "text-navy/40"}`}>
+        <span className={`text-xs font-mono mt-1 tabular-nums ${isDark ? "text-white/60" : "text-navy/70"}`}>
           {active + 1}/{sectionCount}
         </span>
       </nav>

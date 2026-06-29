@@ -30,7 +30,7 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="pt-4 border-t border-white/5 text-white/40 text-xs">
+        <div className="pt-4 border-t border-white/5 text-white/60 text-xs">
           <span suppressHydrationWarning>© {new Date().getFullYear()} بيان</span>
         </div>
       </div>

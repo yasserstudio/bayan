@@ -121,7 +121,7 @@ export function ShareCta() {
       <footer className="border-t border-white/5 py-6 px-6">
         <div className="max-w-4xl mx-auto text-center space-y-2">
           <p className="text-white/60 text-sm">اتأكّد من كل بيان</p>
-          <div className="text-white/40 text-xs space-y-0.5">
+          <div className="text-white/60 text-xs space-y-0.5">
             <p>
               مبادرة من{" "}
               <a
@@ -138,7 +138,7 @@ export function ShareCta() {
               Projet indépendant — ne représente aucun organisme gouvernemental
             </p>
           </div>
-          <p className="text-white/30 text-xs" suppressHydrationWarning>
+          <p className="text-white/60 text-xs" suppressHydrationWarning>
             © {new Date().getFullYear()} بيان
           </p>
         </div>
