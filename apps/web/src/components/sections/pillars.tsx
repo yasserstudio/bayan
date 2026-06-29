@@ -62,13 +62,13 @@ export function Pillars() {
     <section className="min-h-dvh md:h-dvh py-12 md:py-0 flex flex-col justify-center px-6 bg-sand/50 overflow-hidden relative" aria-labelledby="pillars-heading">
       <QrPattern variant="dark" />
       <div className="max-w-7xl mx-auto w-full relative">
-        <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-8 lg:gap-12 items-center mb-5">
+        <div className="grid md:grid-cols-[0.8fr_1.2fr] gap-8 md:gap-12 items-center mb-5">
           <AnimateOnScroll>
-            <div className="text-center lg:text-start">
+            <div className="text-center md:text-start">
               <h2 id="pillars-heading" className="text-3xl md:text-5xl font-extrabold font-heading text-navy mb-3 leading-[1.1]">
                 4 حوايج باش نحميو رواحنا
               </h2>
-              <p className="text-muted-foreground text-base max-w-md mx-auto lg:mx-0">
+              <p className="text-muted-foreground text-base max-w-md mx-auto md:mx-0">
                 بيان ماشي غير أداة تحقّق — هي منظومة كاملة ضد التضليل
               </p>
             </div>
@@ -103,7 +103,7 @@ export function Pillars() {
                     className={`inline-block text-[11px] px-2.5 py-0.5 rounded-full ${
                       pillar.available
                         ? "bg-navy/10 text-navy font-bold"
-                        : "bg-ochre/15 text-ochre font-bold"
+                        : "bg-ochre/10 text-ochre font-bold"
                     }`}
                   >
                     {pillar.status}
@@ -116,10 +116,10 @@ export function Pillars() {
 
         <AnimateOnScroll>
           <div className="bg-card border border-border rounded-xl p-4">
-            <h3 className="font-bold font-heading text-base text-navy mb-3 text-center lg:text-start">
+            <h3 className="font-bold font-heading text-base text-navy mb-3 text-center md:text-start">
               نصائح سريعة باش تحمي روحك
             </h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3">
               {tips.map((tip, i) => (
                 <div key={tip.title} className="flex items-start gap-2.5">
                   <div className="w-8 h-8 rounded-lg bg-ochre/10 text-ochre flex items-center justify-center shrink-0 mt-0.5">
