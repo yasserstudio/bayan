@@ -69,7 +69,7 @@ export function Solution() {
               href="#demo"
               className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-bold px-8 py-3 rounded-full transition-colors"
             >
-              جرّب دروك ↓
+              جرّب دوك ↓
             </a>
           </div>
         </AnimateOnScroll>

@@ -28,7 +28,7 @@ export function StickyCta() {
         href="#demo"
         className="flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy font-bold py-3 rounded-full transition-colors w-full text-sm"
       >
-        جرّب التحقّق دروك
+        جرّب التحقّق دوك
         <HugeiconsIcon icon={ArrowDown01Icon} className="h-4 w-4" aria-hidden="true" />
       </a>
     </div>

@@ -64,7 +64,7 @@ export function Demo() {
       <div className="max-w-7xl mx-auto w-full relative">
         <div className="text-center mb-4">
           <h2 id="demo-heading" className="text-3xl md:text-4xl font-extrabold font-heading text-navy mb-2">
-            جرّب التحقّق دروك
+            جرّب التحقّق دوك
           </h2>
           <p className="text-muted-foreground text-sm">
             دخّل رمز التحقّق تاع البيان — جرّب{" "}

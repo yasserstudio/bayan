@@ -70,7 +70,7 @@ export function Hero() {
           href="#demo"
           className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-bold px-8 py-3 rounded-full transition-colors text-lg"
         >
-          جرّب التحقّق دروك
+          جرّب التحقّق دوك
           <HugeiconsIcon icon={ArrowDown01Icon} className="h-5 w-5" aria-hidden="true" />
         </a>
       </div>
