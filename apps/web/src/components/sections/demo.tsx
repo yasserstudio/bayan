@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowRight01Icon, CheckmarkCircle02Icon, BubbleChatIcon, Search01Icon, UserMultiple02Icon, CancelCircleIcon } from "@hugeicons/core-free-icons";
+import { ArrowRight01Icon, CheckmarkCircle02Icon, BubbleChatIcon, Search01Icon, CancelCircleIcon } from "@hugeicons/core-free-icons";
 import { QrPattern } from "@/components/qr-pattern";
 import { announcements, findAnnouncement, type Announcement } from "@/data/announcements";
 import { shareUrl, shareText, FacebookIcon } from "@/lib/share";
@@ -117,7 +117,7 @@ export function Demo() {
               className="bg-gold hover:bg-gold-light disabled:opacity-50 text-navy font-bold px-6 py-2.5 rounded-xl transition-colors flex items-center gap-2 cursor-pointer"
             >
               <HugeiconsIcon icon={Search01Icon} className="h-5 w-5" aria-hidden="true" />
-              <span className="hidden sm:inline">تحقّق</span>
+              <span>تحقّق</span>
             </button>
           </div>
 
@@ -225,12 +225,7 @@ export function Demo() {
           )}
         </div>
 
-        <div className="flex items-center justify-center gap-2 mt-2 text-muted-foreground text-sm">
-          <HugeiconsIcon icon={UserMultiple02Icon} className="h-4 w-4" aria-hidden="true" />
-          <span>+12,847 واحد جرّبو التحقّق</span>
-        </div>
-
-        <div className="hidden sm:flex items-center justify-center gap-3 mt-2">
+        <div className="flex flex-wrap items-center justify-center gap-3 mt-2">
           <span className="text-muted-foreground text-sm">جرّبتها؟ ابعثها لعائلتك</span>
           <a
             href={`https://wa.me/?text=${encodeURIComponent(shareText + " " + shareUrl)}`}
